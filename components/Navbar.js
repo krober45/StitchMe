@@ -26,6 +26,8 @@ const Navbar = () => {
         </>);
 };
 
+// sidebar hopefully! under construction
+
 // class Example extends React.Component {
 //     showSettings(event) {
 //         event.preventDefault();
