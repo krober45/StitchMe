@@ -7,10 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
-function SignUp() {
-    const [email, setEmail] = useState("");
+function Update() {
     const [username, setUser] = useState("");
-    const [password, setPass] = useState("");
 
     return (
         <Container>
@@ -44,6 +42,6 @@ function SignUp() {
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<SignUp />);
+root.render(<Update />);
 
-export default SignUp;
+export default Update;
