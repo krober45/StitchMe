@@ -1,6 +1,9 @@
-import React from "react";
+import * as React from 'react';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 
-function Themes() {
+export default function SwitchLabels() {
     return (
         <container>
             <div>
@@ -24,5 +27,3 @@ function Themes() {
         </container>
     );
 };
-
-export default Themes;

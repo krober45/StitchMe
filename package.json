@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/material": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "latest"
+  },
+  "description": "https://github.com/mui/material-ui/blob/v5.8.2/docs/data/material/components/switches/SwitchLabels.tsx",
+  "devDependencies": {
+    "react-scripts": "latest"
+  }
+}
