@@ -1,7 +1,10 @@
 import React from "react";
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 
 function SignUp() {
     const [email, setEmail] = useState("");

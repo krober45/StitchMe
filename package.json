@@ -13,6 +13,6 @@
   },
   "description": "https://github.com/mui/material-ui/blob/v5.8.2/docs/data/material/components/switches/SwitchLabels.tsx",
   "devDependencies": {
-    "react-scripts": "^2.1.3"
+    "react-scripts": "^5.0.1"
   }
 }
