@@ -14,13 +14,13 @@ function SignUp() {
 
     return (
         <Container>
-            <row>
-                <col>
+            <Row>
+                <Col>
                     <h1>Update Username</h1>
-                </col>
-            </row>
-            <row>
-                <col>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicText">
                             <Form.Label>Username</Form.Label>
@@ -28,17 +28,17 @@ function SignUp() {
                                 onChange={(e) => setUser(e.target.value)} />
                         </Form.Group>
                     </Form>
-                </col>
-            </row>
-            <row>
-                <col>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <Form>
                         <Button variant="primary" type="submit">
                             Change
                         </Button>
                     </Form>
-                </col>
-            </row>
+                </Col>
+            </Row>
         </Container>
     );
 };

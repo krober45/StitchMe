@@ -14,13 +14,13 @@ function SignUp() {
 
     return (
         <Container>
-            <row>
-                <col>
+            <Row>
+                <Col>
                     <h1>Sign Up!</h1>
-                </col>
-            </row>
-            <row>
-                <col>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email Address</Form.Label>
@@ -28,10 +28,10 @@ function SignUp() {
                                 onChange={(e) => setEmail(e.target.value)} />
                         </Form.Group>
                     </Form>
-                </col>
-            </row>
-            <row>
-                <col>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicText">
                             <Form.Label>Username</Form.Label>
@@ -39,10 +39,10 @@ function SignUp() {
                                 onChange={(e) => setUser(e.target.value)} />
                         </Form.Group>
                     </Form>
-                </col>
-            </row>
-            <row>
-                <col>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
@@ -50,17 +50,24 @@ function SignUp() {
                                 onChange={(e) => setPass(e.target.value)} />
                         </Form.Group>
                     </Form>
-                </col>
-            </row>
-            <row>
-                <col>
+                </Col>
+            </Row>
+
+            <Row>
+                <Col>
+                    <h2 href="#login">Already have an account?</h2>
+                </Col>
+            </Row>
+
+            <Row>
+                <Col>
                     <Form>
                         <Button variant="primary" type="submit">
                             Sign Up
                         </Button>
                     </Form>
-                </col>
-            </row>
+                </Col>
+            </Row>
         </Container >
     );
 };

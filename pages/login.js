@@ -9,35 +9,47 @@ import Container from 'react-bootstrap/Container';
 function Login() {
     return (
         <Container>
-            <row>
-                <col>
+            <Row>
+                <Col>
                     <h1>Login!</h1>
-                </col>
-            </row>
-            <row>
-                <col>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicText">
                             <Form.Label>Username</Form.Label>
                             <Form.Control type="text" />
                         </Form.Group>
                     </Form>
-                </col>
-            </row>
-            <row>
-                <col>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" />
                         </Form.Group>
+                    </Form>
+                </Col>
+            </Row>
 
+            <Row>
+                <Col>
+                    <h2 href="#signup">Need to create an account?</h2>
+                </Col>
+            </Row>
+
+            <Row>
+                <Col>
+                    <Form>
                         <Button variant="primary" type="submit">
                             Login
                         </Button>
                     </Form>
-                </col>
-            </row>
+                </Col>
+            </Row>
         </Container>
     );
 };
