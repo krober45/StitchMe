@@ -9,24 +9,30 @@ import Container from 'react-bootstrap/Container';
 export default function SwitchLabels() {
     return (
         <container>
-            <div>
-                <FormGroup>
-                    <FormControlLabel control={<Switch defaultChecked />} label="Light Mode" />
-                </FormGroup>
-            </div>
+            <row>
+                <col>
+                    <FormGroup>
+                        <FormControlLabel control={<Switch defaultChecked />} label="Light Mode" />
+                    </FormGroup>
+                </col>
+            </row>
 
-            <div>
-                <FormGroup>
-                    <FormControlLabel control={<Switch defaultChecked />} label="Dark Mode" />
-                </FormGroup>
-            </div>
+            <row>
+                <col>
+                    <FormGroup>
+                        <FormControlLabel control={<Switch defaultChecked />} label="Dark Mode" />
+                    </FormGroup>
+                </col>
+            </row >
 
-            <div>
-                <FormGroup>
-                    <FormControlLabel control={<Switch defaultChecked />} label="Colorful Mode" />
-                </FormGroup>
-            </div>
+            <row>
+                <col>
+                    <FormGroup>
+                        <FormControlLabel control={<Switch defaultChecked />} label="Colorful Mode" />
+                    </FormGroup>
+                </col>
+            </row>
 
-        </container>
+        </container >
     );
 };

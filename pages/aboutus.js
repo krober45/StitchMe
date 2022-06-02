@@ -1,36 +1,48 @@
 import React from "react";
-import Col from 'react-bootstrap/Col'
+import row from 'react-bootstrap/row'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 
 function AboutUs() {
     return (
-        <container>
-            <div>
-                <h2>Allyson Nostrand</h2>
-                <image src="./images/example-pic.png"></image>
-                <p>
-                    Blurb about Allyson.
-                </p>
-            </div>
+        <Container fluid>
+            <row>
+                <col xs={4}>
+                    <image src="./images/example-pic-1.png"></image>
+                </col>
+                <col xs={8}>
+                    <h2>Allyson Nostrand</h2>
+                    <p>
+                        Blurb about Allyson.
+                    </p>
+                </col>
+            </row>
 
-            <div>
-                <h2>Khari Robertson</h2>
-                <image src="./images/example-pic.png"></image>
-                <p>
-                    Blurb about Khari.
-                </p>
-            </div>
+            <row>
+                <col xs={4}>
+                    <image src="./images/example-pic-2.png"></image>
+                </col>
+                <col xs={8}>
+                    <h2>Khari Robertson</h2>
+                    <p>
+                        Blurb about Khari.
+                    </p>
+                </col>
+            </row>
 
-            <div>
-                <h2>Isis Alexander</h2>
-                <image src="./images/example-pic.png"></image>
-                <p>
-                    Blurb about Isis.
-                </p>
-            </div>
+            <row>
+                <col xs={4}>
+                    <image src="./images/example-pic-3.png"></image>
+                </col>
+                <col xs={8}>
+                    <h2>Isis Alexander</h2>
+                    <p>
+                        Blurb about Isis.
+                    </p>
+                </col>
+            </row>
 
-        </container>
+        </Container>
     );
 };
 
