@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -70,8 +69,5 @@ function SignUp() {
         </Container >
     );
 };
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<SignUp />);
 
 export default SignUp;
