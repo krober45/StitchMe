@@ -2,10 +2,10 @@ import React from "react";
 import Navbar from 'react-bootstrap/Navbar';
 // import { slide as Menu } from 'react-burger-menu'
 
-const Navbar = () => {
+function Navigation() {
     return (
         <>
-            <Navbar bg="dark" variant="dark">
+            <Navbar>
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
@@ -20,6 +20,7 @@ const Navbar = () => {
                         <Nav.Link href="#login">Login</Nav.Link>
                         <Nav.Link href="#signup">Sign Up</Nav.Link>
                         <Nav.Link href="#profile">Profile</Nav.Link>
+                        <Nav.Link href="#aboutus">About Us</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
@@ -49,4 +50,4 @@ const Navbar = () => {
 //     }
 // }
 
-export default Navbar;
+export default Navigation;

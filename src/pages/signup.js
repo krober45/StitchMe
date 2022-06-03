@@ -1,17 +1,32 @@
 import React from "react";
+import { useState } from 'react';
+import ReactDOM from 'react-dom/client';
 import Form from 'react-bootstrap/Form';
-import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
+function SignUp() {
+    const [email, setEmail] = useState("");
+    const [username, setUser] = useState("");
+    const [password, setPass] = useState("");
 
-function Login() {
     return (
         <Container>
             <Row>
                 <Col>
-                    <h1>Login!</h1>
+                    <h1>Sign Up!</h1>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <Form>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label>Email Address</Form.Label>
+                            <Form.Control type="email"
+                                onChange={(e) => setEmail(e.target.value)} />
+                        </Form.Group>
+                    </Form>
                 </Col>
             </Row>
             <Row>
@@ -19,7 +34,8 @@ function Login() {
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicText">
                             <Form.Label>Username</Form.Label>
-                            <Form.Control type="text" />
+                            <Form.Control type="text"
+                                onChange={(e) => setUser(e.target.value)} />
                         </Form.Group>
                     </Form>
                 </Col>
@@ -29,7 +45,8 @@ function Login() {
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" />
+                            <Form.Control type="password"
+                                onChange={(e) => setPass(e.target.value)} />
                         </Form.Group>
                     </Form>
                 </Col>
@@ -37,7 +54,7 @@ function Login() {
 
             <Row>
                 <Col>
-                    <h2 href="#signup">Need to create an account?</h2>
+                    <h2 href="#login">Already have an account?</h2>
                 </Col>
             </Row>
 
@@ -45,13 +62,16 @@ function Login() {
                 <Col>
                     <Form>
                         <Button variant="primary" type="submit">
-                            Login
+                            Sign Up
                         </Button>
                     </Form>
                 </Col>
             </Row>
-        </Container>
+        </Container >
     );
 };
 
-export default Login;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<SignUp />);
+
+export default SignUp;
