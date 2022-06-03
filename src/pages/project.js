@@ -2,13 +2,14 @@ import React from "react";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
+import project from './images/MH-project-pic.jpg';
 
 function Project() {
     return (
         <Container>
             <Row>
                 <Col>
-                    <image src="./images/MH-project-pic.jpg"></image>
+                <img src={project} alt="MH chaotic gore mangala"/>
                 </Col>
                 <Col>
                     <h2>Notes:</h2>

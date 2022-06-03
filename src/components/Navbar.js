@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container';
+import logo from './images/StitchMeLogo.png';
 // import { slide as Menu } from 'react-burger-menu'
 
 function Navigation() {
@@ -10,11 +11,11 @@ function Navigation() {
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
-                            src="/StitchMeLogo.png"
+                            src={logo}
                             width="30"
                             height="30"
                             className="d-inline-block align-top"
-                            alt="React Bootstrap logo"
+                            alt="app logo"
                         />
                     </Navbar.Brand>
                 </Container>
