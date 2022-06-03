@@ -1,27 +1,22 @@
 import React from "react";
 import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container'
 // import { slide as Menu } from 'react-burger-menu'
 
 function Navigation() {
     return (
         <>
-            <Navbar>
+            <Navbar bg="dark">
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
-                            src="/images/StitchMeLogo.png"
+                            src="/StitchMeLogo.png"
                             width="30"
                             height="30"
                             className="d-inline-block align-top"
                             alt="React Bootstrap logo"
                         />
                     </Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="#login">Login</Nav.Link>
-                        <Nav.Link href="#signup">Sign Up</Nav.Link>
-                        <Nav.Link href="#profile">Profile</Nav.Link>
-                        <Nav.Link href="#aboutus">About Us</Nav.Link>
-                    </Nav>
                 </Container>
             </Navbar>
         </>);
