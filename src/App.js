@@ -22,12 +22,12 @@ return (
     <ReactBootStrap.Nav className="me-auto">
       <ReactBootStrap.Nav.Link href="#features">Home</ReactBootStrap.Nav.Link>
       <ReactBootStrap.Nav.Link href="#pricing">About us</ReactBootStrap.Nav.Link>
-      <ReactBootStrap.NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <ReactBootStrap.NavDropdown.Item href="#action/3.1">Projects</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Item href="#action/3.2">Profile</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Item href="#action/3.3">Something</ReactBootStrap.NavDropdown.Item>
+      <ReactBootStrap.NavDropdown title="Projects" id="collasible-nav-dropdown">
+        <ReactBootStrap.NavDropdown.Item href="#action/3.1">My Profile</ReactBootStrap.NavDropdown.Item>
+        <ReactBootStrap.NavDropdown.Item href="#action/3.2">My Projects</ReactBootStrap.NavDropdown.Item>
+        <ReactBootStrap.NavDropdown.Item href="#action/3.3">Saved Projects</ReactBootStrap.NavDropdown.Item>
         <ReactBootStrap.NavDropdown.Divider />
-        <ReactBootStrap.NavDropdown.Item href="#action/3.4">Separated link</ReactBootStrap.NavDropdown.Item>
+        <ReactBootStrap.NavDropdown.Item href="#action/3.4">Help?</ReactBootStrap.NavDropdown.Item>
       </ReactBootStrap.NavDropdown>
     </ReactBootStrap.Nav>
     <ReactBootStrap.Nav>
