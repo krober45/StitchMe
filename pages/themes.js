@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
-export default function SwitchLabels() {
+function Themes() {
     return (
         <Container>
             <Row>
@@ -36,3 +36,5 @@ export default function SwitchLabels() {
         </Container >
     );
 };
+
+export default Themes;
