@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button'
 
 function Update() {
     const [username, setUser] = useState("");
