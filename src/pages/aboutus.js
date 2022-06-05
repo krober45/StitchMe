@@ -14,7 +14,7 @@ function AboutUs() {
                 <img src={pic1} alt="Aira icon"/>
                 </Col>
                 <Col xs={8}>
-                    <h2>Allyson Nostrand</h2>
+                <h2><a href="https://github.com/allysonnostrand" target="_blank">Allyson Nostrand</a></h2>
                     <p>
                         Blurb about Allyson.
                     </p>
@@ -26,7 +26,7 @@ function AboutUs() {
                 <img src={pic2} alt="Rinne icon"/>
                 </Col>
                 <Col xs={8}>
-                    <h2>Khari Robertson</h2>
+                <h2><a href="https://github.com/krober45" target="_blank">Khari Robertson</a></h2>
                     <p>
                         Blurb about Khari.
                     </p>
@@ -38,7 +38,7 @@ function AboutUs() {
                 <img src={pic3} alt="Arashi icon"/>
                 </Col>
                 <Col xs={8}>
-                    <h2>Isis Alexander</h2>
+                <h2><a href="https://github.com/QueenOfBirbs" target="_blank">Isis Alexander</a></h2>
                     <p>
                         Blurb about Isis.
                     </p>
