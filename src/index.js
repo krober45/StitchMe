@@ -10,5 +10,4 @@ root.render(
         <StyledEngineProvider injectFirst>
             <App />
         </StyledEngineProvider>,
-        // document.getElementById('root')
 );
