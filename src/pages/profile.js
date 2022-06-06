@@ -12,16 +12,16 @@ function Profile() {
                 <>
                     <Col>
                         <Stack>
-                            <Button href="#">Project 1</Button>
-                            <Button href="#">Project 2</Button>
-                            <Button href="#">Project 3</Button>
-                            <Button href="#">Add Project</Button>
+                            <Button href="/project">Project 1</Button>
+                            <Button href="/project">Project 2</Button>
+                            <Button href="/project">Project 3</Button>
+                            <Button href="/project">Add Project</Button>
                         </Stack>
                     </Col>
                     <Col>
                         <Stack>
-                            <Button href="#themes">Link</Button>
-                            <Button href="#update">Link</Button>
+                            <Button href="/themes">Themes</Button>
+                            <Button href="/update">Update Username</Button>
                         </Stack>
                     </Col>
                 </>
