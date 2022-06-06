@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect,useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
@@ -11,9 +11,47 @@ import Profile from './pages/profile';
 import Project from './pages/project';
 import Update from './pages/update';
 import TestPage from './pages/testPage';
+import API from './utils/API'
 import * as ReactBootStrap from "react-bootstrap";
   
 function App() {
+  const [userId, setUserId] = useState(null);
+  const [token, setToken] = useState(null);
+
+  useEffect(()=>{
+    const savedToken = localStorage.getItem("token");
+    if(savedToken){
+      setToken(savedToken)
+    }
+  })
+
+  // useEffect(()=> {
+  //       if(userData.userId){
+  //         setUserId(userData.userId)
+  //       } else {
+  //         setUserId(null)
+  //       }
+  //     })
+
+  const handleLoginSubmit=loginData=>{
+    console.log("handle login",loginData)
+    API.login(loginData).then(data=>{
+      console.log(`this is the ${data}`)
+      if(data.token){
+        setToken(data.token)
+        localStorage.setItem("token",data.token)
+      }
+    })
+  }
+
+  const handleSignupSubmit=signupData =>{
+    API.signup(signupData).then(data=>{
+      if(data.token){
+        setToken(data.token)
+        localStorage.setItem("token", data.token)
+      }
+    })
+  }
 
 return ( 
   <Router>
@@ -44,14 +82,14 @@ return (
   </ReactBootStrap.Navbar>
 
   <Routes>
-    <Route path="/" element={<SignUp/>}/>
-    <Route path="/login" element={<Login/>}/>
-    <Route path="/profile" element={<Profile/>}/>
-    <Route path="/themes" element={<Themes/>}/>
-    <Route path="/aboutus" element={<AboutUs/>}/>
-    <Route path="/project" element={<Project/>}/>
-    <Route path="/update" element={<Update/>}/>
-    <Route path="/test" element={<TestPage/>}/>
+    <Route path="/" element={<SignUp signup={handleSignupSubmit}/>}/>
+    <Route path="/login" element={<Login login={handleLoginSubmit}/>}/>
+    <Route path="/profile" element={<Profile userId={userId}/>}/>
+    <Route path="/themes" element={<Themes />}/>
+    <Route path="/aboutus" element={<AboutUs />}/>
+    <Route path="/project" element={<Project />}/>
+    <Route path="/update" element={<Update />}/>
+    <Route path="/test" element={<TestPage />}/>
   </Routes>
 </Router>
 );

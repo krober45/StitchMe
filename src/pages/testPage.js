@@ -1,18 +1,31 @@
 import React,{useState, useEffect} from 'react'
 import Test from '../components/Test'
 import API from '../utils/API'
+import { useParams } from 'react-router-dom'
 
-export default function TestPage() {
-    const [users, setUsers] = useState([])
+export default function TestPage(props) {
+    const {id} = useParams()
+    const [userData, setUserData] = useState(null)
 
     useEffect(()=> {
-        API.getAllUsers().then(userData => {
-          setUsers(userData)
+        API.getOneUser(id).then((data) => {
+            if (data.username) {
+              setUserData(data)  
+            }
         })
-      }, [])
+    }, [])
     
   return (
-    users.map(user=>{
-    return (<Test key={user._id} username={user.username}/>)
-    })
+    <div className="Profile">
+      {!userData ? (
+        <h3>loading...</h3>
+      ) : (
+        <>
+          <h1>{userData.username}'s profile!</h1>
+          {userData.Projects.map((project) => (
+            <h3>{project.title}</h3>
+          ))}
+        </>
+      )}
+    </div>
 )}
