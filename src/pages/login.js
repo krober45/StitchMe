@@ -37,7 +37,7 @@ function Login() {
 
             <Row>
                 <Col>
-                    <h2 href="#signup">Need to create an account?</h2>
+                    <a href="/">Need to create an account?</a>
                 </Col>
             </Row>
 

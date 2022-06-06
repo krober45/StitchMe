@@ -54,7 +54,7 @@ function SignUp() {
 
             <Row>
                 <Col>
-                    <h2 href="#login">Already have an account?</h2>
+                    <a href="/login">Already have an account?</a>
                 </Col>
             </Row>
 

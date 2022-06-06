@@ -14,31 +14,43 @@ import * as ReactBootStrap from "react-bootstrap";
   
 function App() {
 return (
+  <Router>
     <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <ReactBootStrap.Container>
-  <ReactBootStrap.Navbar.Brand href="#home">StitchMe</ReactBootStrap.Navbar.Brand>
-  <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-    <ReactBootStrap.Nav className="me-auto">
-      <ReactBootStrap.Nav.Link href="#features">Home</ReactBootStrap.Nav.Link>
-      <ReactBootStrap.Nav.Link href="#pricing">About us</ReactBootStrap.Nav.Link>
-      <ReactBootStrap.NavDropdown title="Projects" id="collasible-nav-dropdown">
-        <ReactBootStrap.NavDropdown.Item href="#action/3.1">My Profile</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Item href="#action/3.2">My Projects</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Item href="#action/3.3">Saved Projects</ReactBootStrap.NavDropdown.Item>
-        <ReactBootStrap.NavDropdown.Divider />
-        <ReactBootStrap.NavDropdown.Item href="#action/3.4">Help?</ReactBootStrap.NavDropdown.Item>
-      </ReactBootStrap.NavDropdown>
-    </ReactBootStrap.Nav>
-    <ReactBootStrap.Nav>
-      <ReactBootStrap.Nav.Link href="#deets">Login</ReactBootStrap.Nav.Link>
-      <ReactBootStrap.Nav.Link eventKey={2} href="#memes">
-        Sign-up
-      </ReactBootStrap.Nav.Link>
-    </ReactBootStrap.Nav>
-  </ReactBootStrap.Navbar.Collapse>
-  </ReactBootStrap.Container>
-</ReactBootStrap.Navbar>
+    <ReactBootStrap.Container>
+    <ReactBootStrap.Navbar.Brand href="/profile">StitchMe</ReactBootStrap.Navbar.Brand>
+    <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+      <ReactBootStrap.Nav className="me-auto">
+        {/* <ReactBootStrap.Nav.Link href="#features">Home</ReactBootStrap.Nav.Link> */}
+        <ReactBootStrap.Nav.Link href="/aboutus">About us</ReactBootStrap.Nav.Link>
+        <ReactBootStrap.NavDropdown title="Projects" id="collasible-nav-dropdown">
+          {/* <ReactBootStrap.NavDropdown.Item href="/profile">My Profile</ReactBootStrap.NavDropdown.Item> */}
+          <ReactBootStrap.NavDropdown.Item href="/project">Project Name</ReactBootStrap.NavDropdown.Item>
+          {/* <ReactBootStrap.NavDropdown.Item href="#action/3.3">Saved Projects</ReactBootStrap.NavDropdown.Item> */}
+          <ReactBootStrap.NavDropdown.Divider />
+          {/* <ReactBootStrap.NavDropdown.Item href="#action/3.4">Help?</ReactBootStrap.NavDropdown.Item> */}
+        </ReactBootStrap.NavDropdown>
+      </ReactBootStrap.Nav>
+      <ReactBootStrap.Nav>
+        {/* <ReactBootStrap.Nav.Link href="#deets">Login</ReactBootStrap.Nav.Link>
+        <ReactBootStrap.Nav.Link eventKey={2} href="#memes">
+          Sign-up
+        </ReactBootStrap.Nav.Link> */}
+      </ReactBootStrap.Nav>
+    </ReactBootStrap.Navbar.Collapse>
+    </ReactBootStrap.Container>
+  </ReactBootStrap.Navbar>
+
+  <Routes>
+    <Route path="/" element={<SignUp/>}/>
+    <Route path="/login" element={<Login/>}/>
+    <Route path="/profile" element={<Profile/>}/>
+    <Route path="/themes" element={<Themes/>}/>
+    <Route path="/aboutus" element={<AboutUs/>}/>
+    <Route path="/project" element={<Project/>}/>
+    <Route path="/update" element={<Update/>}/>
+  </Routes>
+</Router>
 );
 }
   
