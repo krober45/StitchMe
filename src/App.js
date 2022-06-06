@@ -10,10 +10,12 @@ import Themes from './pages/themes';
 import Profile from './pages/profile';
 import Project from './pages/project';
 import Update from './pages/update';
+import TestPage from './pages/testPage';
 import * as ReactBootStrap from "react-bootstrap";
   
 function App() {
-return (
+
+return ( 
   <Router>
     <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <ReactBootStrap.Container>
@@ -49,6 +51,7 @@ return (
     <Route path="/aboutus" element={<AboutUs/>}/>
     <Route path="/project" element={<Project/>}/>
     <Route path="/update" element={<Update/>}/>
+    <Route path="/test" element={<TestPage/>}/>
   </Routes>
 </Router>
 );

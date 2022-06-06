@@ -1,4 +1,5 @@
-import * as React from 'react';
+// import * as React from 'react';
+import React, {useState,useEffect} from 'react'
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
@@ -6,7 +7,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
-function Themes() {
+ function Themes() {
+
     return (
         <Container>
             <Row>
@@ -37,4 +39,4 @@ function Themes() {
     );
 };
 
-export default Themes;
+export default Themes

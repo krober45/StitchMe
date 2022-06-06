@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
 
-function SignUp() {
+function SignUp(props) {
     const [email, setEmail] = useState("");
     const [username, setUser] = useState("");
     const [password, setPass] = useState("");
@@ -20,13 +20,13 @@ function SignUp() {
             </Row>
             <Row>
                 <Col>
-                    <Form>
+                    {/* <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email Address</Form.Label>
                             <Form.Control type="email"
                                 onChange={(e) => setEmail(e.target.value)} />
                         </Form.Group>
-                    </Form>
+                    </Form> */}
                 </Col>
             </Row>
             <Row>
@@ -68,6 +68,7 @@ function SignUp() {
                 </Col>
             </Row>
         </Container >
+        
     );
 };
 
