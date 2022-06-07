@@ -6,7 +6,7 @@ import pic1 from './images/example-pic-1.png';
 import pic2 from './images/example-pic-2.png';
 import pic3 from './images/example-pic-3.png';
 
-function AboutUs() {
+function AboutUs(props) {
     return (
         <Container>
             <Row>
