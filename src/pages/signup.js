@@ -5,8 +5,12 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
+import { useNavigate } from 'react-router-dom'
+import API from '../utils/API'
 
 function SignUp(props) {
+
+    let navigate = useNavigate();
     // const [email, setEmail] = useState("");
     // const [username, setUser] = useState("");
 
@@ -15,14 +19,34 @@ function SignUp(props) {
         password:""
     });
 
-    const signupSubmit = e=>{
+    // const signupSubmit = e=>{
+    //     e.preventDefault();
+    //     props.signup(signupData);
+    //     setSignupData({
+    //         username:"",
+    //         password:""
+    //     })
+    // }
+
+    const handleSignupSubmit= e =>{
         e.preventDefault();
-        props.signup(signupData);
         setSignupData({
             username:"",
             password:""
         })
-    }
+
+        API.signup(signupData).then(data=>{
+            console.log("this is signup data", data)
+            props.setUserId(data.user._id)
+            props.setUsername(data.user.username)
+            navigate(`../profile/${data.user._id}`, { replace: true })
+            if(data.token){
+                props.setToken(data.token)
+                localStorage.setItem("token", data.token)
+          }
+        })
+      }
+
     return (
         <Container>
             <Row>
@@ -54,7 +78,7 @@ function SignUp(props) {
             </Row>
             <Row>
                 <Col>
-                    <Form onSubmit={signupSubmit}>
+                    <Form onSubmit={handleSignupSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicText">
                             <Form.Label>Username</Form.Label>
                             <Form.Control type="text" value={signupData.username} name="signupUsername" onChange={(e)=>setSignupData({...signupData,username:e.target.value})} />

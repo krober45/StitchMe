@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
 
-function Update() {
+function Update(props) {
     const [username, setUser] = useState("");
 
     return (

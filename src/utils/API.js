@@ -39,5 +39,40 @@ module.exports = {
                 "Content-Type":"application/json"
             }
         }).then(res=>res.json())
-    }
+    },
+
+    getOneProject:projectId =>{
+        return fetch(`${BASE_URL}/api/projects/${projectId}`).then(res =>res.json())
+    },
+
+    createTodo:(todoData,projectId)=>{
+        console.log(todoData)
+        return fetch (`${BASE_URL}/api/projects/${projectId}/todos`, {
+            method:"POST",
+            body:JSON.stringify(todoData),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        }).then(res=>res.json())
+    },
+
+    createStep:(stepData,projectId)=>{
+        return fetch (`${BASE_URL}/api/projects/${projectId}/steps`, {
+            method:"POST",
+            body:JSON.stringify(stepData),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        }).then(res=>res.json())
+    },
+
+    // createImage:imageData=>{
+    //     return fetch (`${BASE_URL}/api/projects/${projectId}/images`, {
+    //         method:"POST",
+    //         body:JSON.stringify(imageData),
+    //         headers:{
+    //             "Content-Type":"application/json"
+    //         }
+    //     }).then(res=>res.json())
+    // },
 }
