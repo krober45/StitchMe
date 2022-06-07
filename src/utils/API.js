@@ -1,4 +1,4 @@
-const BASE_URL= "http://localhost:3001"
+const BASE_URL= "https://dry-castle-61993.herokuapp.com"
 
 module.exports = {
     getAllUsers: () =>{
