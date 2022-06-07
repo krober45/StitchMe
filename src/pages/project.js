@@ -128,19 +128,19 @@ function Project(props) {
         )}
         </div>
     );
-    function Notes() {
-        const [show, setShow] = useState(false);
-        const handleShow = () => setShow(true);
-        const handleClose = () => setShow(false);
-        const [type, setType] = useState("");
-        const [use, setUse] = useState("");
-        const [colors, setColors] = useState("");
-        const [fabric, setFabric] = useState("");
-        const [link, setLink] = useState("");
+    // function Notes() {
+    //     const [show, setShow] = useState(false);
+    //     const handleShow = () => setShow(true);
+    //     const handleClose = () => setShow(false);
+    //     const [type, setType] = useState("");
+    //     const [use, setUse] = useState("");
+    //     const [colors, setColors] = useState("");
+    //     const [fabric, setFabric] = useState("");
+    //     const [link, setLink] = useState("");
 
         return (
             <>
-                <Button variant="primary" onClick={handleShow}>
+                {/* <Button variant="primary" onClick={handleShow}>
                     Edit Notes
                 </Button>
                 <Modal show={show} onHide={handleClose}>
@@ -199,7 +199,7 @@ function Project(props) {
                             Save Changes
                         </Button>
                     </Modal.Footer>
-                </Modal>
+                </Modal> */}
             </>
         );
     }
@@ -241,8 +241,8 @@ function Project(props) {
     //         </>
     //     );
     // }
-};
+// };
 
-render(<Notes />);
+// render(<Notes />);
 // render(<List />);
 export default Project;
