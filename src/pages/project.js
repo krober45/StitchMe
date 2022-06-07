@@ -6,6 +6,8 @@ import project from './images/MH-project-pic.jpg';
 import Button from 'react-bootstrap/Button'
 import { useParams } from "react-router-dom";
 import API from "../utils/API";
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
 
 function Project(props) {
     const { id } = useParams();
@@ -87,7 +89,7 @@ function Project(props) {
         <Container>
             <Row>
                 <Col>
-                <img src={project} alt="MH chaotic gore mangala"/>
+                    <img src={project} alt="MH chaotic gore mangala" />
                 </Col>
                 <Col>
                     <h2>To-do:</h2>
@@ -126,6 +128,121 @@ function Project(props) {
         )}
         </div>
     );
+    function Notes() {
+        const [show, setShow] = useState(false);
+        const handleShow = () => setShow(true);
+        const handleClose = () => setShow(false);
+        const [type, setType] = useState("");
+        const [use, setUse] = useState("");
+        const [colors, setColors] = useState("");
+        const [fabric, setFabric] = useState("");
+        const [link, setLink] = useState("");
+
+        return (
+            <>
+                <Button variant="primary" onClick={handleShow}>
+                    Edit Notes
+                </Button>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Notes</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Form>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Emboridery Type:</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    autoFocus
+                                    onChange={(e) => setType(e.target.value)}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Project Use</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    autoFocus
+                                    onChange={(e) => setUse(e.target.value)}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Colors Used:</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    autoFocus
+                                    onChange={(e) => setColors(e.target.value)}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Fabric Used:</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    autoFocus
+                                    onChange={(e) => setFabric(e.target.value)}
+                                />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Pattern Link:</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    autoFocus
+                                    onChange={(e) => setLink(e.target.value)}
+                                />
+                            </Form.Group>
+                        </Form>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                        <Button variant="primary" onClick={handleClose}>
+                            Save Changes
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </>
+        );
+    }
+
+    // function List() {
+    //     const [show, setShow] = useState(false);
+    //     const handleShow = () => setShow(true);
+    //     const handleClose = () => setShow(false);
+
+    //     return (
+    //         <>
+    //             <Button variant="primary" onClick={handleShow}>
+    //                 Edit List
+    //             </Button>
+    //             <Modal show={show} onHide={handleClose}>
+    //                 <Modal.Header closeButton>
+    //                     <Modal.Title>Todo List:</Modal.Title>
+    //                 </Modal.Header>
+    //                 <Modal.Body>
+    //                     <Form>
+    //                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+    //                             <Form.Control
+    //                                 type="text"
+    //                                 autoFocus
+    //                                 onChange={(e) => setItem(e.target.value)}
+    //                             />
+    //                         </Form.Group>
+    //                     </Form>
+    //                 </Modal.Body>
+    //                 <Modal.Footer>
+    //                     <Button variant="secondary" onClick={handleClose}>
+    //                         Close
+    //                     </Button>
+    //                     <Button variant="primary" onClick={handleClose}>
+    //                         Save Changes
+    //                     </Button>
+    //                 </Modal.Footer>
+    //             </Modal>
+    //         </>
+    //     );
+    // }
 };
 
+render(<Notes />);
+// render(<List />);
 export default Project;
