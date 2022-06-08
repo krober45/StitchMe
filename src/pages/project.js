@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import CloudinaryUploadWidget from "../components/CloudinaryUploadWidget";
 import Button from 'react-bootstrap/Button'
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import API from "../utils/API";
 
 function Project(props) {

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,} from "react";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
 import Stack from 'react-bootstrap/Stack'
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import API from "../utils/API";
 
 
@@ -20,7 +20,7 @@ function Profile(props) {
         API.getOneUser(id).then((data) =>{
             if (data.user) {
                 console.log("get one user",data.user)
-                setUserData(data.user)  
+                setUserData(data.user)
             }
         })
     }, []);
@@ -62,7 +62,7 @@ function Profile(props) {
                      <Col>
                          <Stack> 
                             {userData.projects.map((project) => (
-                             <Button key={`${project.title}`} href={`/project/${project._id}`}>{project.title}</Button>  
+                             <Link key={`${project.title}`} to={`/project/${project._id}`}>{project.title}</Link>  
                             ))}
                             <form onSubmit={formSubmit}>
                                 <input name="title" value={formData.title} onChange={handleChange} placeholder="title"/>
@@ -73,8 +73,8 @@ function Profile(props) {
                      </Col>
                      <Col>
                          <Stack>
-                             <Button href={`/themes/${id}`}>Themes</Button>
-                             <Button href={`/update/${id}`}>Update Username</Button>
+                             <Link to={`/themes/${id}`}>Themes</Link>
+                             <Link to={`/update/${id}`}>Update Username</Link>
                          </Stack>
                      </Col>
                 </>
