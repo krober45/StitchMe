@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import API from '../utils/API'
 
 function SignUp(props) {
@@ -38,6 +38,7 @@ function SignUp(props) {
         API.signup(signupData).then(data=>{
             console.log("this is signup data", data)
             props.setUserId(data.user._id)
+            // console.log("this is the set userid", userId)
             props.setUsername(data.user.username)
             navigate(`../profile/${data.user._id}`, { replace: true })
             if(data.token){
@@ -94,7 +95,7 @@ function SignUp(props) {
 
             <Row>
                 <Col>
-                    <a href="/login">Already have an account?</a>
+                    <Link to={"/login"}>Already have an account?</Link>
                 </Col>
             </Row>
 

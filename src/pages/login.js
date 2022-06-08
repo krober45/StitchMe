@@ -4,13 +4,13 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import API from '../utils/API'
 
 
 
 function Login(props) {
-
+    
     let navigate = useNavigate();
 
     const [loginData, setLoginData] = useState({
@@ -29,8 +29,8 @@ function Login(props) {
         API.login(loginData).then(data=>{
           console.log("this is the data", data)
           console.log("this is the user id", data.user._id)
-          props.setUsername(data.user.username)
           props.setUserId(data.user._id)
+          console.log("this should be the user id",props.userId)
           navigate(`../profile/${data.user._id}`, { replace: true })
           if(data.token){
             props.setToken(data.token)
@@ -83,7 +83,7 @@ function Login(props) {
 
             <Row>
                 <Col>
-                    <a href="/">Need to create an account?</a>
+                    <Link to={"/"}>Need to create an account?</Link>
                 </Col>
             </Row>
 
