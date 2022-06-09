@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { AdvancedImage } from '@cloudinary/react';
+import { Cloudinary } from "@cloudinary/url-gen";
 
 class CloudinaryUploadWidget extends Component {
     componentDidMount() {
@@ -15,7 +17,7 @@ class CloudinaryUploadWidget extends Component {
                     console.log("Done! Here is the image info: ", result.info);
                     document
                         .getElementById("uploadedimage")
-                        .setAttribute("src", result.info.secure_url);
+                        .setAttribute("src", result.info.secure_url)
                 }
             }
         );

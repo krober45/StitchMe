@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+/* font-family: 'Pathway Gothic One', sans-serif;
+font-family: 'Shrikhand', cursive; */
+
+/* BACKGROUND */
+html,
+#root {
+  background-image: url(./images/quilt-bg.jpg);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* NAVBAR */
+.navbar {
+  background-color: #f4c22a;
+  font-family: 'Shrikhand', cursive;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#nav-container {
+  width: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ABOUT US */
+h2 {
+  font-family: 'Shrikhand', cursive;
 }
 
-.App-link {
-  color: #61dafb;
+h2 a:link {
+  color: black;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+h2 a:hover {
+  color: #ff7d90;
+  text-decoration: none;
+}
+
+h2 a:active {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Pathway Gothic One', sans-serif;
+}
+
+#allyson-pic {
+  margin-right: 20px;
+}
+
+#allyson-box {
+  background-image: url(./images/center-stripe-pattern.jpg);
+  border: 10px;
+  border-style: outset;
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+#khari-pic {
+  margin-right: 20px;
+}
+
+#khari-box {
+  background-image: url(./images/left-stripe-pattern.jpg);
+  border: 10px;
+  border-style: outset;
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+#isis-pic {
+  margin-right: 20px;
+}
+
+#isis-box {
+  background-image: url(./images/right-stripe-pattern.jpg);
+  border: 10px;
+  border-style: outset;
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-left: 20px;
 }
