@@ -86,3 +86,163 @@ p {
   margin-bottom: 25px;
   margin-left: 20px;
 }
+
+/* SIGN UP */
+#signup-box {
+  background-color: whitesmoke;
+  border: #5295a9;
+  padding: 50px;
+  border-width: 10px;
+  border-style: double;
+  border-radius: 20px;
+  text-align: center;
+  margin: 40px;
+  width: 500px;
+  height: 450px;
+  font-family: 'Shrikhand', cursive;
+}
+
+#signup-button {
+  background-color: #6b4bb0;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 15px;
+}
+
+#signup {
+  color: #e73301;
+  padding: 5px;
+}
+
+#signup-button:hover {
+  background-color: #dfd34d;
+}
+
+#signup-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #signup-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+h4 a {
+  font-size:medium;
+}
+
+h4 a:link {
+  color: black;
+  text-decoration: none;
+}
+
+h4 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+h4 a:hover {
+  color: #f27f01;
+  text-decoration: none;
+}
+
+h4 a:active {
+  color: black;
+  text-decoration: none;
+}
+
+/* LOGIN */
+#login-box {
+  background-color: whitesmoke;
+  border: #e53501;
+  padding: 50px;
+  border-width: 10px;
+  border-style: double;
+  border-radius: 20px;
+  text-align: center;
+  margin: 40px;
+  width: 500px;
+  height: 450px;
+  font-family: 'Shrikhand', cursive;
+}
+
+#login-button {
+  background-color: #5295a9;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 15px;
+}
+
+#login {
+  color: #cbc42f;
+  padding: 5px;
+}
+
+#login-button:hover {
+  background-color: #e4607d;
+}
+
+#login-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #login-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+h5 a {
+  font-size:medium;
+}
+
+h5 a:link {
+  color: black;
+  text-decoration: none;
+}
+
+h5 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+h5 a:hover {
+  color: #b094bc;
+  text-decoration: none;
+}
+
+h5 a:active {
+  color: black;
+  text-decoration: none;
+}
