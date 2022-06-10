@@ -48,6 +48,8 @@ function App(props) {
             </ReactBootStrap.Nav>
             <ReactBootStrap.Nav>
             </ReactBootStrap.Nav>
+                {/* <ReactBootStrap.Nav>
+            </ReactBootStrap.Nav> */}
           </ReactBootStrap.Navbar.Collapse>
         </ReactBootStrap.Container>
       </ReactBootStrap.Navbar>
