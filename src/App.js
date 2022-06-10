@@ -13,6 +13,7 @@ import TestPage from './pages/testPage';
 import * as ReactBootStrap from "react-bootstrap";
 import logo from './images/stitchme-logo-v2-trans.png';
 
+
 function App(props) {
   const [userId, setUserId] = useState();
   const [token, setToken] = useState();
@@ -46,9 +47,7 @@ function App(props) {
               <ReactBootStrap.NavDropdown title="Projects" id="collasible-nav-dropdown">
               </ReactBootStrap.NavDropdown>
             </ReactBootStrap.Nav>
-            <ReactBootStrap.Nav>
-            </ReactBootStrap.Nav>
-                {/* <ReactBootStrap.Nav>
+            {/* <ReactBootStrap.Nav>
             </ReactBootStrap.Nav> */}
           </ReactBootStrap.Navbar.Collapse>
         </ReactBootStrap.Container>

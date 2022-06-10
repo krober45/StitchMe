@@ -75,7 +75,7 @@ function Profile(props) {
                                 </Col>
                                 <Col>
                                     <Stack>
-                                    <Link id="theme-button" to={`/themes/${id}`}>Themes</Link>
+                                        <Link id="theme-button" to={`/themes/${id}`}>Themes</Link>
                                     </Stack>
                                 </Col>
                             </>
