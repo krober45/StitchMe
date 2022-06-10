@@ -76,7 +76,6 @@ function Profile(props) {
                                 <Col>
                                     <Stack>
                                         <Button id="theme-button" href={`/themes/${id}`}>Themes</Button>
-                                        {/* <Button id="update-button" href={`/update/${id}`}>Update Username</Button> */}
                                     </Stack>
                                 </Col>
                             </>
