@@ -10,7 +10,6 @@ import Profile from './pages/profile';
 import Project from './pages/project';
 import Update from './pages/update';
 import TestPage from './pages/testPage';
-import API from './utils/API'
 import * as ReactBootStrap from "react-bootstrap";
 import logo from './images/StitchMeLogo.png';
 

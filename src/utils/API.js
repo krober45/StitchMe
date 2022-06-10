@@ -66,13 +66,15 @@ module.exports = {
         }).then(res=>res.json())
     },
 
-    // createImage:imageData=>{
-    //     return fetch (`${BASE_URL}/api/projects/${projectId}/images`, {
-    //         method:"POST",
-    //         body:JSON.stringify(imageData),
-    //         headers:{
-    //             "Content-Type":"application/json"
-    //         }
-    //     }).then(res=>res.json())
-    // },
+    createImage:(imageData,projectId,username)=>{
+        return fetch (`${BASE_URL}/api/projects/${projectId}/images`, {
+            method:"POST",
+            body:JSON.stringify({
+                imageURL: imageData,
+                username: username}),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        }).then(res=>res.json())
+    },
 }

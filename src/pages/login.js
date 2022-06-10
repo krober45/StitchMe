@@ -8,11 +8,11 @@ import { useNavigate, Link } from 'react-router-dom'
 import API from '../utils/API'
 
 
-
 function Login(props) {
     
     let navigate = useNavigate();
 
+    const [errormessage, setErrorMessage] = useState("")
     const [loginData, setLoginData] = useState({
         username:"",
         password:""
@@ -26,6 +26,7 @@ function Login(props) {
             username:"",
             password:""
         })
+        
         API.login(loginData).then(data=>{
           console.log("this is the data", data)
           console.log("this is the user id", data.user._id)
@@ -35,34 +36,15 @@ function Login(props) {
           if(data.token){
             props.setToken(data.token)
             localStorage.setItem("token",data.token)
-          }
+          }  
         })
       }
 
-    // const loginSubmit = e=>{
-    //     e.preventDefault();
-    //     console.log("data",loginData);
-    //     props.login(loginData);
-    //     setLoginData({
-    //         username:"",
-    //         password:""
-    //     })
-    // }
     return (
         <Container>
             <Row>
                 <Col>
                     <h1>Login!</h1>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    {/* <Form>
-                       
-                            <Form.Label>Username</Form.Label>
-                            <Form.Control type="text" value={loginData.username} name="loginUsername" onChange={(e)=>setLoginData({...loginData,username:e.target.value})}/>
-                        
-                    </Form> */}
                 </Col>
             </Row>
             <Row>
@@ -75,6 +57,7 @@ function Login(props) {
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" value={loginData.password} name="loginPassword" onChange={(e)=>setLoginData({...loginData,password:e.target.value})}/>
+                            <p>{errormessage}</p>
                             <Button variant="primary" type="submit">Login</Button>
                         </Form.Group>
                     </Form>
@@ -84,16 +67,6 @@ function Login(props) {
             <Row>
                 <Col>
                     <Link to={"/"}>Need to create an account?</Link>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col>
-                    {/* <Form>
-                        <Button variant="primary" type="submit">
-                            Login
-                        </Button>
-                    </Form> */}
                 </Col>
             </Row>
         </Container>
