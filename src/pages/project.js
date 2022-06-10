@@ -83,49 +83,49 @@ function Project(props) {
                 <h3>loading...</h3>
             ) : (
                 <>
-                    <h1>{projectData.title}</h1>
+                    <h1 id="project-title">{projectData.title}</h1>
                     <Container>
                         <Row>
-                            <Col>
+                            <Col id="pic-area">
                                 <img
                                     id="uploadedimage"
                                     src="">
                                 </img>
                                 <CloudinaryUploadWidget />
                             </Col>
-                            <Col>
+                            <Col id="note-text">
                                 <h2>Notes:</h2>
                                 {projectData.todos.map((todo) => (
-                                    <p key={`${todo.todoText}`}>{todo.todoText}</p>
+                                    <li id="bullet-point" key={`${todo.todoText}`}>{todo.todoText}</li>
                                 ))}
                                 <form onSubmit={formSubmit}>
-                                    <input name="todoText" value={formData.todoText} onChange={handleChange} />
+                                    <input id="note" name="todoText" value={formData.todoText} onChange={handleChange} />
                                     by {formData.username = projectData.username}!
-                                    <Button type="submit">Add To-do</Button>
+                                    <Button id="note-button" type="submit">Add Note</Button>
                                 </form>
                             </Col>
                         </Row>
 
                         <Row>
-                            <Col>
+                            <Col id="step-text">
                                 <h2>Steps:</h2>
                                 {projectData.steps.map((step) => (
-                                    <p key={`${projectData.steps}`}>{step.stepText}</p>
+                                    <li id="bullet-point" key={`${projectData.steps}`}>{step.stepText}</li>
                                 ))}
                                 <form onSubmit={anotherFormSubmit}>
-                                    <input name="stepText" value={stepData.stepText} onChange={stephandleChange} />
+                                    <input id="step" name="stepText" value={stepData.stepText} onChange={stephandleChange} />
                                     by {formData.username = projectData.username}!
-                                    <Button type="submit">Add Step</Button>
+                                    <Button id="step-button" type="submit">Add Step</Button>
                                 </form>
                             </Col>
 
                             <Col>
-                                <img
+                                {/* <img
                                     id="uploadedimage"
                                     src="">
                                 </img>
 
-                                <CloudinaryUploadWidget />
+                                <CloudinaryUploadWidget /> */}
                             </Col>
                         </Row>
 

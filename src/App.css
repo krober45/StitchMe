@@ -18,9 +18,14 @@ html,
   width: auto;
 }
 
+a.navbar-brand {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
 /* ABOUT US */
 h2 {
   font-family: 'Shrikhand', cursive;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 h2 a:link {
@@ -34,7 +39,7 @@ h2 a:visited {
 }
 
 h2 a:hover {
-  color: #ff7d90;
+  color: #3a75d1;
   text-decoration: none;
 }
 
@@ -45,6 +50,9 @@ h2 a:active {
 
 p {
   font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
 }
 
 #allyson-pic {
@@ -52,8 +60,9 @@ p {
 }
 
 #allyson-box {
-  background-image: url(./images/center-stripe-pattern.jpg);
+  background-image: url(./images/floral-bg.jpg);
   border: 10px;
+  border-color: #70c6a9;
   border-style: outset;
   padding: 20px;
   margin-bottom: 25px;
@@ -66,8 +75,9 @@ p {
 }
 
 #khari-box {
-  background-image: url(./images/left-stripe-pattern.jpg);
+  background-image: url(./images/abstract-bg.jpg);
   border: 10px;
+  border-color: #ffed00;
   border-style: outset;
   padding: 20px;
   margin-bottom: 25px;
@@ -79,8 +89,10 @@ p {
 }
 
 #isis-box {
-  background-image: url(./images/right-stripe-pattern.jpg);
+  background-image: url(./images/blob-bg.jpg);
+  background-position: center;
   border: 10px;
+  border-color: #fd2324;
   border-style: outset;
   padding: 20px;
   margin-bottom: 25px;
@@ -97,7 +109,9 @@ p {
   border-radius: 20px;
   text-align: center;
   margin: 40px;
-  width: 500px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   height: 450px;
   font-family: 'Shrikhand', cursive;
 }
@@ -107,6 +121,7 @@ p {
   border: 2px solid black;
   border-radius: 30px;
   box-shadow: black 4px 4px 0 0;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   color: black;
   cursor: pointer;
   display: inline-block;
@@ -144,7 +159,7 @@ p {
 }
 
 h4 a {
-  font-size:medium;
+  font-size: medium;
 }
 
 h4 a:link {
@@ -177,7 +192,9 @@ h4 a:active {
   border-radius: 20px;
   text-align: center;
   margin: 40px;
-  width: 500px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   height: 450px;
   font-family: 'Shrikhand', cursive;
 }
@@ -187,6 +204,7 @@ h4 a:active {
   border: 2px solid black;
   border-radius: 30px;
   box-shadow: black 4px 4px 0 0;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   color: black;
   cursor: pointer;
   display: inline-block;
@@ -224,7 +242,7 @@ h4 a:active {
 }
 
 h5 a {
-  font-size:medium;
+  font-size: medium;
 }
 
 h5 a:link {
@@ -245,4 +263,393 @@ h5 a:hover {
 h5 a:active {
   color: black;
   text-decoration: none;
+}
+
+/* THEMES */
+#theme-box {
+  background-color: whitesmoke;
+  border: #f27f01;
+  border-width: 10px;
+  border-style: double;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+  margin: 40px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+}
+
+#theme-box h1 {
+  color: #3c9089;
+}
+
+.switch span {
+  font-family: 'Shrikhand', cursive;
+  font-size: x-large;
+  text-align: left;
+}
+
+#blurb {
+  font-size: medium;
+}
+
+#switch-text {
+  padding: 10px;
+}
+
+.light span {
+  color: #e85780;
+}
+
+.dark span {
+  color: #5e477f;
+}
+
+.color span {
+  color: #3a75d1;
+}
+
+/* PROFILE */
+#welcome {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  padding: 15px;
+}
+
+#project-button {
+  background-color: #3c9089;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 5px;
+}
+
+#project-button:hover {
+  background-color: #fbeee0;
+}
+
+#project-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #project-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#input {
+  padding: 5px;
+  margin-right: 10px;
+  border: black;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+}
+
+#add-button {
+  background-color: #ed7801;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 20px;
+}
+
+#add-button:hover {
+  background-color: #fbeee0;
+}
+
+#add-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #add-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#add-project {
+  font-family: 'Shrikhand', cursive;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#theme-button {
+  background-color: #5e477f;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 5px;
+}
+
+#theme-button:hover {
+  background-color: #fbeee0;
+}
+
+#theme-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #theme-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#update-button {
+  background-color: #e4607d;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 5px;
+}
+
+#update-button:hover {
+  background-color: #fbeee0;
+}
+
+#update-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #update-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+/* PROJECTS */
+#project-title {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  padding: 15px;
+}
+
+#upload-widget button {
+  background-color: #fbeee0;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#upload-widget button {
+  background-color: #fff;
+}
+
+#upload-widget button {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #upload-widget button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#note {
+  padding: 5px;
+  margin-right: 10px;
+  border: black;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+  font-family: 'Shrikhand', cursive;
+}
+
+#step {
+  padding: 5px;
+  margin-right: 10px;
+  border: black;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+  font-family: 'Shrikhand', cursive;
+}
+
+#note-text {
+  font-family: 'Shrikhand', cursive;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  background-color: white;
+  border: #e73301;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+#step-text {
+  font-family: 'Shrikhand', cursive;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  background-color: white;
+  border: #f4c22a;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+#note-button {
+  background-color: #3a75d1;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 20px;
+}
+
+#note-button:hover {
+  background-color: #fbeee0;
+}
+
+#note-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #note-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+#step-button {
+  background-color: #e4607d;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 20px;
+}
+
+#step-button:hover {
+  background-color: #fbeee0;
+}
+
+#step-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #step-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#bullet-point{
+  text-decoration: dotted;
 }
