@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cloudinary/react": "^1.4.1",
+    "@cloudinary/url-gen": "^1.8.0",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mui/material": "latest",
@@ -16,7 +18,6 @@
     "react-bootstrap": "^2.4.0",
     "react-dom": "latest",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "styled-components": "^5.3.5",
     "typescript": "latest",

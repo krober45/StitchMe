@@ -1,38 +1,655 @@
-.App {
+/* font-family: 'Pathway Gothic One', sans-serif;
+font-family: 'Shrikhand', cursive; */
+
+/* BACKGROUND */
+html,
+#root {
+  background-image: url(./images/quilt-bg.jpg);
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #f4c22a;
+  font-family: 'Shrikhand', cursive;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#nav-container {
+  width: auto;
+}
+
+a.navbar-brand {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+/* ABOUT US */
+h2 {
+  font-family: 'Shrikhand', cursive;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+h2 a:link {
+  color: black;
+  text-decoration: none;
+}
+
+h2 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+h2 a:hover {
+  color: #3a75d1;
+  text-decoration: none;
+}
+
+h2 a:active {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: bold;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+}
+
+#allyson-pic {
+  margin-right: 20px;
+}
+
+#allyson-box {
+  background-image: url(./images/floral-bg.jpg);
+  border: 10px;
+  border-color: #70c6a9;
+  border-style: outset;
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+#khari-pic {
+  margin-right: 20px;
+}
+
+#khari-box {
+  background-image: url(./images/abstract-bg.jpg);
+  border: 10px;
+  border-color: #ffed00;
+  border-style: outset;
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+#isis-pic {
+  margin-right: 20px;
+}
+
+#isis-box {
+  background-image: url(./images/blob-bg.jpg);
+  background-position: center;
+  border: 10px;
+  border-color: #fd2324;
+  border-style: outset;
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+/* SIGN UP */
+#signup-box {
+  background-color: whitesmoke;
+  border: #5295a9;
+  padding: 50px;
+  border-width: 10px;
+  border-style: double;
+  border-radius: 20px;
   text-align: center;
+  margin: 40px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 450px;
+  font-family: 'Shrikhand', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#signup-button {
+  background-color: #6b4bb0;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#signup {
+  color: #e73301;
+  padding: 5px;
+}
+
+#signup-button:hover {
+  background-color: #dfd34d;
+}
+
+#signup-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #signup-button {
+    min-width: 120px;
+    padding: 0 25px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h4 a {
+  font-size: medium;
 }
 
-.App-link {
-  color: #61dafb;
+h4 a:link {
+  color: black;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h4 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+h4 a:hover {
+  color: #f27f01;
+  text-decoration: none;
+}
+
+h4 a:active {
+  color: black;
+  text-decoration: none;
+}
+
+/* LOGIN */
+#login-box {
+  background-color: whitesmoke;
+  border: #e53501;
+  padding: 50px;
+  border-width: 10px;
+  border-style: double;
+  border-radius: 20px;
+  text-align: center;
+  margin: 40px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 450px;
+  font-family: 'Shrikhand', cursive;
+}
+
+#login-button {
+  background-color: #5295a9;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 15px;
+}
+
+#login {
+  color: #cbc42f;
+  padding: 5px;
+}
+
+#login-button:hover {
+  background-color: #e4607d;
+}
+
+#login-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #login-button {
+    min-width: 120px;
+    padding: 0 25px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+h5 a {
+  font-size: medium;
+}
+
+h5 a:link {
+  color: black;
+  text-decoration: none;
+}
+
+h5 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+h5 a:hover {
+  color: #b094bc;
+  text-decoration: none;
+}
+
+h5 a:active {
+  color: black;
+  text-decoration: none;
+}
+
+/* THEMES */
+#theme-box {
+  background-color: whitesmoke;
+  border: #f27f01;
+  border-width: 10px;
+  border-style: double;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Shrikhand', cursive;
+  margin: 40px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+}
+
+#theme-box h1 {
+  color: #3c9089;
+}
+
+.switch span {
+  font-family: 'Shrikhand', cursive;
+  font-size: x-large;
+  text-align: left;
+}
+
+#blurb {
+  font-size: medium;
+}
+
+#switch-text {
+  padding: 10px;
+}
+
+.light span {
+  color: #e85780;
+}
+
+.dark span {
+  color: #5e477f;
+}
+
+.color span {
+  color: #3a75d1;
+}
+
+/* PROFILE */
+#welcome {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  padding: 15px;
+}
+
+#project-button {
+  background-color: #3c9089;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 5px;
+}
+
+#project-button:hover {
+  background-color: #fbeee0;
+}
+
+#project-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #project-button {
+    min-width: 120px;
+    padding: 0 25px;
   }
+}
+
+#input {
+  padding: 5px;
+  margin-right: 10px;
+  border: black;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+}
+
+#add-button {
+  background-color: #ed7801;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 20px;
+}
+
+#add-button:hover {
+  background-color: #fbeee0;
+}
+
+#add-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #add-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#add-project {
+  font-family: 'Shrikhand', cursive;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#theme-button {
+  background-color: #5e477f;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 5px;
+}
+
+#theme-button:hover {
+  background-color: #fbeee0;
+}
+
+#theme-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #theme-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#update-button {
+  background-color: #e4607d;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 5px;
+}
+
+#update-button:hover {
+  background-color: #fbeee0;
+}
+
+#update-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #update-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+/* PROJECTS */
+#project-title {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  padding: 15px;
+}
+
+#upload-widget button {
+  background-color: #fbeee0;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#upload-widget button {
+  background-color: #fff;
+}
+
+#upload-widget button {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #upload-widget button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#note {
+  padding: 5px;
+  margin-right: 10px;
+  border: black;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+  font-family: 'Shrikhand', cursive;
+}
+
+#step {
+  padding: 5px;
+  margin-right: 10px;
+  border: black;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+  font-family: 'Shrikhand', cursive;
+}
+
+#note-text {
+  font-family: 'Shrikhand', cursive;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  background-color: white;
+  border: #e73301;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+#step-text {
+  font-family: 'Shrikhand', cursive;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  background-color: white;
+  border: #f4c22a;
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+
+#note-button {
+  background-color: #3a75d1;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 20px;
+}
+
+#note-button:hover {
+  background-color: #fbeee0;
+}
+
+#note-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #note-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+
+#step-button {
+  background-color: #e4607d;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: black 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-family: 'Shrikhand', cursive;
+  margin: 20px;
+}
+
+#step-button:hover {
+  background-color: #fbeee0;
+}
+
+#step-button:active {
+  box-shadow: black 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  #step-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+#bullet-point{
+  text-decoration: dotted;
 }

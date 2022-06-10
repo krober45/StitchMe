@@ -14,15 +14,15 @@ function SignUp(props) {
     const [errormessage, setErrorMessage] = useState("")
 
     const [signupData, setSignupData] = useState({
-        username:"",
-        password:""
+        username: "",
+        password: ""
     });
 
     const handleSignupSubmit= e =>{
         e.preventDefault();
         setSignupData({
-            username:"",
-            password:""
+            username: "",
+            password: ""
         })
             if (signupData.password.length < 8 ){
                 setErrorMessage("password must be at least 8 characters")
@@ -34,44 +34,51 @@ function SignUp(props) {
             props.setUserId(data.user._id)
             props.setUsername(data.user.username)
             navigate(`../profile/${data.user._id}`, { replace: true })
-            if(data.token){
+            if (data.token) {
                 props.setToken(data.token)
                 localStorage.setItem("token", data.token)
-          }
+            }
         })
-      }
+    }
 
     return (
-        <Container>
+        <Container id="signup-box">
             <Row>
                 <Col>
-                    <h1>Sign Up!</h1>
+                    <h1 id="signup">Sign Up!</h1>
                 </Col>
             </Row>
             <Row>
                 <Col>
                     <Form onSubmit={handleSignupSubmit}>
-                            <Form.Group className="mb-3" controlId="formBasicText">
+                        <Form.Group className="mb-3" controlId="formBasicText">
                             <Form.Label>Username</Form.Label>
-                            <Form.Control type="text" value={signupData.username} name="signupUsername" onChange={(e)=>setSignupData({...signupData,username:e.target.value})} />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Control type="text" value={signupData.username} name="signupUsername" onChange={(e) => setSignupData({ ...signupData, username: e.target.value })} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password"  value={signupData.password} name="signupPassword" onChange={(e)=>setSignupData({...signupData,password:e.target.value})}/>
-                            <p>{errormessage}</p>
-                            <Button variant="primary" type="submit">Sign Up</Button>
-                            </Form.Group>
+                            <Form.Control type="password" value={signupData.password} name="signupPassword" onChange={(e) => setSignupData({ ...signupData, password: e.target.value })} />
+                            <Button id="signup-button" variant="primary" type="submit">Create Account</Button>
+                        </Form.Group>
                     </Form>
                 </Col>
             </Row>
 
             <Row>
                 <Col>
-                    <Link to={"/login"}>Already have an account?</Link>
+                    <h4><a id="already-account" href="/login">Already have an account?</a></h4>
+                </Col>
+            </Row>
+
+            <Row>
+                <Col>
+                    {/* <Form>
+                        <Button variant="primary" type="submit">Sign Up</Button>
+                    </Form> */}
                 </Col>
             </Row>
         </Container >
-        
+
     );
 };
 

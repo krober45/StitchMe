@@ -11,7 +11,7 @@ import Project from './pages/project';
 import Update from './pages/update';
 import TestPage from './pages/testPage';
 import * as ReactBootStrap from "react-bootstrap";
-import logo from './images/StitchMeLogo.png';
+import logo from './images/stitchme-logo-v2-trans.png';
 
 function App(props) {
   const [userId, setUserId] = useState();
@@ -27,9 +27,10 @@ function App(props) {
 
   return (
     <Router>
-      <ReactBootStrap.Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <ReactBootStrap.Container>
+      <ReactBootStrap.Navbar collapseOnSelect expand="lg" id="topbar">
+        <ReactBootStrap.Container id="nav-container">
           <img
+          id="logo"
             src={logo}
             width="30"
             height="30"

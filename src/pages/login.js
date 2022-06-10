@@ -41,10 +41,10 @@ function Login(props) {
       }
 
     return (
-        <Container>
+        <Container id="login-box">
             <Row>
                 <Col>
-                    <h1>Login!</h1>
+                    <h1 id="login">Login!</h1>
                 </Col>
             </Row>
             <Row>
@@ -57,8 +57,12 @@ function Login(props) {
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" value={loginData.password} name="loginPassword" onChange={(e)=>setLoginData({...loginData,password:e.target.value})}/>
+<<<<<<< HEAD
+                            <Button id="login-button" variant="primary" type="submit">Login</Button>
+=======
                             <p>{errormessage}</p>
                             <Button variant="primary" type="submit">Login</Button>
+>>>>>>> dev
                         </Form.Group>
                     </Form>
                 </Col>
@@ -66,7 +70,21 @@ function Login(props) {
 
             <Row>
                 <Col>
+<<<<<<< HEAD
+                    <h5><a href="/">Need to create an account?</a></h5>
+                </Col>
+            </Row>
+
+            <Row>
+                <Col>
+                    {/* <Form>
+                        <Button variant="primary" type="submit">
+                            Login
+                        </Button>
+                    </Form> */}
+=======
                     <Link to={"/"}>Need to create an account?</Link>
+>>>>>>> dev
                 </Col>
             </Row>
         </Container>
