@@ -9,8 +9,8 @@ export default function CloudinaryUploadWidget (props){
                 cloudName: "dh0g8qizo",
                 uploadPreset: "project-pic-cloud",
                 multiple: false,
-                api_key: '798413723769332',
-                api_secret: 'QYSbwcr2eKmbjxx-AH2JKUsWqnI'
+                api_key: process.env.REACT_APP_API_KEY,
+                api_secret: process.env.REACT_APP_API_SECRET
             },
             (error, result) => {
                 if (!error && result && result.event === "success") {
