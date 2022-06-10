@@ -27,7 +27,7 @@ html,
 }
 
 #links a:hover {
-color: black;
+  color: black;
 }
 
 #navbar-brand {
@@ -67,8 +67,10 @@ p {
 
 }
 
-#allyson-pic {
-  margin-right: 20px;
+#allyson-pic img {
+  height: 300px;
+  width: 275px;
+  padding: 10px;
 }
 
 #allyson-box {
@@ -79,11 +81,13 @@ p {
   padding: 20px;
   margin-bottom: 25px;
   margin-top: 25px;
-  margin-left: 20px;
+  margin-left: 60px;
 }
 
-#khari-pic {
-  margin-right: 20px;
+#khari-pic img {
+  height: 300px;
+  width: 300px;
+  padding: 10px;
 }
 
 #khari-box {
@@ -93,11 +97,13 @@ p {
   border-style: outset;
   padding: 20px;
   margin-bottom: 25px;
-  margin-left: 20px;
+  margin-left: 60px;
 }
 
-#isis-pic {
-  margin-right: 20px;
+#isis-pic img {
+  height: 300px;
+  width: 275px;
+  padding: 10px;
 }
 
 #isis-box {
@@ -108,7 +114,7 @@ p {
   border-style: outset;
   padding: 20px;
   margin-bottom: 25px;
-  margin-left: 20px;
+  margin-left: 60px;
 }
 
 /* SIGN UP */

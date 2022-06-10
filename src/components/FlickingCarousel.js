@@ -1,3 +1,4 @@
+import { start } from "@cloudinary/url-gen/qualifiers/textAlignment";
 import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
 
