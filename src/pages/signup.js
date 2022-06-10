@@ -18,18 +18,18 @@ function SignUp(props) {
         password: ""
     });
 
-    const handleSignupSubmit= e =>{
+    const handleSignupSubmit = e => {
         e.preventDefault();
         setSignupData({
             username: "",
             password: ""
         })
-            if (signupData.password.length < 8 ){
-                setErrorMessage("password must be at least 8 characters")
-            } else if (!signupData.username){
-                setErrorMessage("please type in a username")
-            }
-        API.signup(signupData).then(data=>{
+        if (signupData.password.length < 8) {
+            setErrorMessage("password must be at least 8 characters")
+        } else if (!signupData.username) {
+            setErrorMessage("please type in a username")
+        }
+        API.signup(signupData).then(data => {
             console.log("this is signup data", data)
             props.setUserId(data.user._id)
             props.setUsername(data.user.username)
@@ -67,14 +67,6 @@ function SignUp(props) {
             <Row>
                 <Col>
                     <h4><a id="already-account" href="/login">Already have an account?</a></h4>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col>
-                    {/* <Form>
-                        <Button variant="primary" type="submit">Sign Up</Button>
-                    </Form> */}
                 </Col>
             </Row>
         </Container >

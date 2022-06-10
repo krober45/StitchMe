@@ -66,11 +66,7 @@ function Login(props) {
 
             <Row>
                 <Col>
-                    {/* <Form>
-                        <Button variant="primary" type="submit">
-                            Login
-                        </Button>
-                    </Form> */}
+
                     <h5><Link to={"/"}>Need to create an account?</Link></h5>
                 </Col>
             </Row>
