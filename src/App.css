@@ -16,9 +16,21 @@ html,
 
 #nav-container {
   width: auto;
+  text-align: center;
 }
 
-a.navbar-brand {
+#links a {
+  color: rgba(0, 0, 0, .55);
+  padding: 0.5rem;
+  text-decoration: none;
+  top: 10px;
+}
+
+#links a:hover {
+color: black;
+}
+
+#navbar-brand {
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
@@ -650,6 +662,6 @@ h5 a:active {
   }
 }
 
-#bullet-point{
+#bullet-point {
   text-decoration: dotted;
 }
