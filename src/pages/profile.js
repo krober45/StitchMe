@@ -62,7 +62,7 @@ function Profile(props) {
                                 <Col>
                                     <Stack>
                                         {userData.projects.map((project) => (
-                                            <Button id="project-button" key={`${project.title}`} href={`/project/${project._id}`}>{project.title}</Button>
+                                            <Link id="project-button" key={`${project.title}`} to={`/project/${project._id}`}>{project.title}</Link>
                                         ))}
                                         <div id="add-project">
                                             <form onSubmit={formSubmit}>
@@ -75,7 +75,7 @@ function Profile(props) {
                                 </Col>
                                 <Col>
                                     <Stack>
-                                        <Button id="theme-button" href={`/themes/${id}`}>Themes</Button>
+                                        <Link id="theme-button" to={`/themes/${id}`}>Themes</Link>
                                     </Stack>
                                 </Col>
                             </>

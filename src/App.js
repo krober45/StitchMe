@@ -46,8 +46,8 @@ function App(props) {
               <ReactBootStrap.NavDropdown title="Projects" id="collasible-nav-dropdown">
               </ReactBootStrap.NavDropdown>
             </ReactBootStrap.Nav>
-            <ReactBootStrap.Nav>
-            </ReactBootStrap.Nav>
+            {/* <ReactBootStrap.Nav>
+            </ReactBootStrap.Nav> */}
           </ReactBootStrap.Navbar.Collapse>
         </ReactBootStrap.Container>
       </ReactBootStrap.Navbar>
