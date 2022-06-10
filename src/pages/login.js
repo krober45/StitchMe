@@ -59,15 +59,8 @@ function Login(props) {
                             <Form.Control type="password" value={loginData.password} name="loginPassword" onChange={(e) => setLoginData({ ...loginData, password: e.target.value })} />
                             <Button id="login-button" variant="primary" type="submit">Login</Button>
                             <p>{errormessage}</p>
-                            <Button variant="primary" type="submit">Login</Button>
                         </Form.Group>
                     </Form>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col>
-                    <h5><a href="/">Need to create an account?</a></h5>
                 </Col>
             </Row>
 
@@ -78,7 +71,7 @@ function Login(props) {
                             Login
                         </Button>
                     </Form> */}
-                    <Link to={"/"}>Need to create an account?</Link>
+                    <h5><Link to={"/"}>Need to create an account?</Link></h5>
                 </Col>
             </Row>
         </Container>
