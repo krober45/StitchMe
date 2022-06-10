@@ -108,6 +108,12 @@ function Project(props) {
                                     id="uploadedimage"
                                     src="">
                                 </img>
+                                <Row>
+                                    <CloudinaryUploadWidget setImageData={setImageData} imageFormSubmit={imageFormSubmit} id={id} username={projectData.username} />
+                                    {projectData.images.map((image) => (
+                                        <img id="uploadedimage" src={image.imageURL} alt=""></img>
+                                    ))}
+                                </Row>
                             </Col>
                             <Col id="note-text">
                                 <h2>Notes:</h2>
@@ -136,14 +142,9 @@ function Project(props) {
                             </Col>
 
                             <Col>
-                                <CloudinaryUploadWidget setImageData={setImageData} imageFormSubmit={imageFormSubmit} id={id} username={projectData.username}/>
-                                {projectData.images.map((image) =>(
-                                <img id="uploadedimage" src={image.imageURL} alt=""></img>    
-                                ))} 
+                                {/* add carousel here isis */}
                             </Col>
                         </Row>
-
-
                     </Container>
                 </>
             )}

@@ -5,6 +5,7 @@
   "dependencies": {
     "@cloudinary/react": "^1.4.1",
     "@cloudinary/url-gen": "^1.8.0",
+    "@egjs/react-flicking": "^4.9.0",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mui/material": "latest",
