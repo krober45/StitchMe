@@ -4,15 +4,15 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import API from '../utils/API'
 
 
-
 function Login(props) {
-
+    
     let navigate = useNavigate();
 
+    const [errormessage, setErrorMessage] = useState("")
     const [loginData, setLoginData] = useState({
         username:"",
         password:""
@@ -26,43 +26,25 @@ function Login(props) {
             username:"",
             password:""
         })
+        
         API.login(loginData).then(data=>{
           console.log("this is the data", data)
           console.log("this is the user id", data.user._id)
-          props.setUsername(data.user.username)
           props.setUserId(data.user._id)
+          console.log("this should be the user id",props.userId)
           navigate(`../profile/${data.user._id}`, { replace: true })
           if(data.token){
             props.setToken(data.token)
             localStorage.setItem("token",data.token)
-          }
+          }  
         })
       }
 
-    // const loginSubmit = e=>{
-    //     e.preventDefault();
-    //     console.log("data",loginData);
-    //     props.login(loginData);
-    //     setLoginData({
-    //         username:"",
-    //         password:""
-    //     })
-    // }
     return (
         <Container id="login-box">
             <Row>
                 <Col>
                     <h1 id="login">Login!</h1>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    {/* <Form>
-                       
-                            <Form.Label>Username</Form.Label>
-                            <Form.Control type="text" value={loginData.username} name="loginUsername" onChange={(e)=>setLoginData({...loginData,username:e.target.value})}/>
-                        
-                    </Form> */}
                 </Col>
             </Row>
             <Row>
@@ -75,7 +57,12 @@ function Login(props) {
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" value={loginData.password} name="loginPassword" onChange={(e)=>setLoginData({...loginData,password:e.target.value})}/>
+<<<<<<< HEAD
                             <Button id="login-button" variant="primary" type="submit">Login</Button>
+=======
+                            <p>{errormessage}</p>
+                            <Button variant="primary" type="submit">Login</Button>
+>>>>>>> dev
                         </Form.Group>
                     </Form>
                 </Col>
@@ -83,6 +70,7 @@ function Login(props) {
 
             <Row>
                 <Col>
+<<<<<<< HEAD
                     <h5><a href="/">Need to create an account?</a></h5>
                 </Col>
             </Row>
@@ -94,6 +82,9 @@ function Login(props) {
                             Login
                         </Button>
                     </Form> */}
+=======
+                    <Link to={"/"}>Need to create an account?</Link>
+>>>>>>> dev
                 </Col>
             </Row>
         </Container>

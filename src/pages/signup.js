@@ -5,37 +5,31 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import API from '../utils/API'
 
 function SignUp(props) {
 
     let navigate = useNavigate();
-    // const [email, setEmail] = useState("");
-    // const [username, setUser] = useState("");
+    const [errormessage, setErrorMessage] = useState("")
 
     const [signupData, setSignupData] = useState({
         username: "",
         password: ""
     });
 
-    // const signupSubmit = e=>{
-    //     e.preventDefault();
-    //     props.signup(signupData);
-    //     setSignupData({
-    //         username:"",
-    //         password:""
-    //     })
-    // }
-
-    const handleSignupSubmit = e => {
+    const handleSignupSubmit= e =>{
         e.preventDefault();
         setSignupData({
             username: "",
             password: ""
         })
-
-        API.signup(signupData).then(data => {
+            if (signupData.password.length < 8 ){
+                setErrorMessage("password must be at least 8 characters")
+            } else if (!signupData.username){
+                setErrorMessage("please type in a username")
+            }
+        API.signup(signupData).then(data=>{
             console.log("this is signup data", data)
             props.setUserId(data.user._id)
             props.setUsername(data.user.username)
@@ -52,28 +46,6 @@ function SignUp(props) {
             <Row>
                 <Col>
                     <h1 id="signup">Sign Up!</h1>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    {/* <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email Address</Form.Label>
-                            <Form.Control type="email"
-                                onChange={(e) => setEmail(e.target.value)} />
-                        </Form.Group>
-                    </Form> */}
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    {/* <Form>
-                        
-                            <Form.Label>Username</Form.Label>
-                            <Form.Control type="text"
-                                onChange={(e) => setUser(e.target.value)} />
-                        
-                    </Form> */}
                 </Col>
             </Row>
             <Row>

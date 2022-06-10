@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { AdvancedImage } from '@cloudinary/react';
-import { Cloudinary } from "@cloudinary/url-gen";
-
-class CloudinaryUploadWidget extends Component {
-    componentDidMount() {
+import React, { useEffect } from "react";
+ 
+export default function CloudinaryUploadWidget (props){
+ 
+    useEffect(() =>{
+ 
         var myWidget = window.cloudinary.createUploadWidget(
             {
                 cloudName: "dh0g8qizo",
@@ -15,9 +15,8 @@ class CloudinaryUploadWidget extends Component {
             (error, result) => {
                 if (!error && result && result.event === "success") {
                     console.log("Done! Here is the image info: ", result.info);
-                    document
-                        .getElementById("uploadedimage")
-                        .setAttribute("src", result.info.secure_url)
+                        props.setImageData(result.info.secure_url)
+                        props.imageFormSubmit(result.info.secure_url)
                 }
             }
         );
@@ -28,15 +27,16 @@ class CloudinaryUploadWidget extends Component {
             },
             false
         );
-    }
-
-    render() {
+       
+        }, []);
+ 
         return (
-            <button id="upload_widget" className="cloudinary-button">
-                Upload
-            </button>
+            <div>
+                <button id="upload_widget" className="cloudinary-button">
+                    Upload
+                </button>
+            </div>
         );
     }
-}
-
-export default CloudinaryUploadWidget;
+ 
+ 

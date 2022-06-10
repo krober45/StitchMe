@@ -10,7 +10,10 @@ import API from "../utils/API";
 function Project(props) {
     const { id } = useParams();
     const [projectData, setProjectData] = useState();
-    const [userData, setUserData] = useState();
+
+    const [imageData, setImageData] = useState({
+        imageURL: "",
+    });
 
     const [formData, setFormData] = useState({
         todoText: "",
@@ -43,6 +46,20 @@ function Project(props) {
         setFormData({
             ...formData,
             [name]: value
+        })
+    }
+
+    const imageFormSubmit = (image) => {
+        console.log("clicked")
+        API.createImage(image, id, projectData.username).then(res => {
+            setImageData({
+                imageURL: "",
+            })
+            API.getOneProject(id).then((data) => {
+                if (data.project) {
+                    setProjectData(data.project)
+                }
+            })
         })
     }
 
@@ -91,7 +108,6 @@ function Project(props) {
                                     id="uploadedimage"
                                     src="">
                                 </img>
-                                <CloudinaryUploadWidget />
                             </Col>
                             <Col id="note-text">
                                 <h2>Notes:</h2>
@@ -120,12 +136,10 @@ function Project(props) {
                             </Col>
 
                             <Col>
-                                {/* <img
-                                    id="uploadedimage"
-                                    src="">
-                                </img>
-
-                                <CloudinaryUploadWidget /> */}
+                                <CloudinaryUploadWidget setImageData={setImageData} imageFormSubmit={imageFormSubmit} id={id} username={projectData.username}/>
+                                {projectData.images.map((image) =>(
+                                <img id="uploadedimage" src={image.imageURL} alt=""></img>    
+                                ))} 
                             </Col>
                         </Row>
 
