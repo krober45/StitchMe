@@ -11,22 +11,12 @@ import API from '../utils/API'
 function SignUp(props) {
 
     let navigate = useNavigate();
-    // const [email, setEmail] = useState("");
-    // const [username, setUser] = useState("");
+    const [errormessage, setErrorMessage] = useState("")
 
     const [signupData, setSignupData] = useState({
         username:"",
         password:""
     });
-
-    // const signupSubmit = e=>{
-    //     e.preventDefault();
-    //     props.signup(signupData);
-    //     setSignupData({
-    //         username:"",
-    //         password:""
-    //     })
-    // }
 
     const handleSignupSubmit= e =>{
         e.preventDefault();
@@ -34,11 +24,14 @@ function SignUp(props) {
             username:"",
             password:""
         })
-
+            if (signupData.password.length < 8 ){
+                setErrorMessage("password must be at least 8 characters")
+            } else if (!signupData.username){
+                setErrorMessage("please type in a username")
+            }
         API.signup(signupData).then(data=>{
             console.log("this is signup data", data)
             props.setUserId(data.user._id)
-            // console.log("this is the set userid", userId)
             props.setUsername(data.user.username)
             navigate(`../profile/${data.user._id}`, { replace: true })
             if(data.token){
@@ -57,28 +50,6 @@ function SignUp(props) {
             </Row>
             <Row>
                 <Col>
-                    {/* <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email Address</Form.Label>
-                            <Form.Control type="email"
-                                onChange={(e) => setEmail(e.target.value)} />
-                        </Form.Group>
-                    </Form> */}
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    {/* <Form>
-                        
-                            <Form.Label>Username</Form.Label>
-                            <Form.Control type="text"
-                                onChange={(e) => setUser(e.target.value)} />
-                        
-                    </Form> */}
-                </Col>
-            </Row>
-            <Row>
-                <Col>
                     <Form onSubmit={handleSignupSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicText">
                             <Form.Label>Username</Form.Label>
@@ -87,6 +58,7 @@ function SignUp(props) {
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password"  value={signupData.password} name="signupPassword" onChange={(e)=>setSignupData({...signupData,password:e.target.value})}/>
+                            <p>{errormessage}</p>
                             <Button variant="primary" type="submit">Sign Up</Button>
                             </Form.Group>
                     </Form>
@@ -96,14 +68,6 @@ function SignUp(props) {
             <Row>
                 <Col>
                     <Link to={"/login"}>Already have an account?</Link>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col>
-                    {/* <Form>
-                        <Button variant="primary" type="submit">Sign Up</Button>
-                    </Form> */}
                 </Col>
             </Row>
         </Container >
