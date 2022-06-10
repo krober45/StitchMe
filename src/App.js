@@ -37,16 +37,10 @@ function App(props) {
             className="d-inline-block align-top"
             alt="app logo"
           />
-<<<<<<< HEAD
-          <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-            <ReactBootStrap.Nav className="me-auto">
-=======
           <ReactBootStrap.Navbar.Brand id="navbar-brand">StitchMe</ReactBootStrap.Navbar.Brand>
           <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
             <ReactBootStrap.Nav id="links" className="me-auto">
->>>>>>> cfa566f96bec2b69020ac898ad780d48bd996a49
               <Link to={`/aboutus/${userId}`}>About us</Link>
               <Link to={`/profile/${userId}`}>Profile</Link>
               <ReactBootStrap.NavDropdown title="Projects" id="collasible-nav-dropdown">
