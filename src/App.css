@@ -608,6 +608,10 @@ input {
   list-style-image: url(./images/floral-blue-xs.png);
 }
 
+li{
+  padding: 10px;
+}
+
 #note-button {
   background-color: #3a75d1;
   border: 2px solid black;

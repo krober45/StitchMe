@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import CloudinaryUploadWidget from "../components/CloudinaryUploadWidget";
 import Button from 'react-bootstrap/Button'
-import { useParams } from "react-router-dom";
 import API from "../utils/API";
 import Carousel from 'react-bootstrap/Carousel';
 import Pic1 from "./images/nikki-slide.png"
@@ -119,6 +118,7 @@ function Project(props) {
                                     ))}
                                 </Row>
                             </Col>
+
                             <Col id="note-text">
                                 <h2>Notes:</h2>
                                 {projectData.todos.map((todo) => (
