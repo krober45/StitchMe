@@ -6,6 +6,10 @@ import CloudinaryUploadWidget from "../components/CloudinaryUploadWidget";
 import Button from 'react-bootstrap/Button'
 import { useParams } from "react-router-dom";
 import API from "../utils/API";
+import Carousel from 'react-bootstrap/Carousel';
+import Pic1 from "./images/nikki-slide.png"
+import Pic2 from "./images/hiiro-slide.jpg"
+import Pic3 from "./images/adonis-slide.jpg"
 
 function Project(props) {
     const { id } = useParams();
@@ -118,7 +122,7 @@ function Project(props) {
                             <Col id="note-text">
                                 <h2>Notes:</h2>
                                 {projectData.todos.map((todo) => (
-                                    <li id="bullet-point" key={`${todo.todoText}`}>{todo.todoText}</li>
+                                    <li id="note-bullet" key={`${todo.todoText}`}>{todo.todoText}</li>
                                 ))}
                                 <form onSubmit={formSubmit}>
                                     <input id="note" name="todoText" value={formData.todoText} onChange={handleChange} />
@@ -132,7 +136,7 @@ function Project(props) {
                             <Col id="step-text">
                                 <h2>Steps:</h2>
                                 {projectData.steps.map((step) => (
-                                    <li id="bullet-point" key={`${projectData.steps}`}>{step.stepText}</li>
+                                    <li id="step-bullet" key={`${projectData.steps}`}>{step.stepText}</li>
                                 ))}
                                 <form onSubmit={anotherFormSubmit}>
                                     <input id="step" name="stepText" value={stepData.stepText} onChange={stephandleChange} />
@@ -142,7 +146,26 @@ function Project(props) {
                             </Col>
 
                             <Col>
-                                {/* add carousel here isis */}
+                                <Carousel id="carousel-box">
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic1}
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic2}
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic3}
+                                        />
+                                    </Carousel.Item>
+                                </Carousel>
                             </Col>
                         </Row>
                     </Container>

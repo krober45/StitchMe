@@ -547,6 +547,14 @@ h5 a:active {
   }
 }
 
+li {
+  padding: 2.5px;
+}
+
+input {
+  width: 225px;
+}
+
 #note {
   padding: 5px;
   margin-right: 10px;
@@ -569,6 +577,7 @@ h5 a:active {
 
 #note-text {
   font-family: 'Shrikhand', cursive;
+  font-size: larger;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   background-color: white;
   border: #e73301;
@@ -576,11 +585,16 @@ h5 a:active {
   border-width: 10px;
   border-radius: 20px;
   padding: 10px;
+  min-height: fit-content;
+}
 
+#note-bullet {
+  list-style-image: url(./images/floral-yellow-xs.png);
 }
 
 #step-text {
   font-family: 'Shrikhand', cursive;
+  font-size: larger;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   background-color: white;
   border: #f4c22a;
@@ -588,7 +602,10 @@ h5 a:active {
   border-width: 10px;
   border-radius: 20px;
   padding: 10px;
+}
 
+#step-bullet {
+  list-style-image: url(./images/floral-blue-xs.png);
 }
 
 #note-button {
@@ -668,6 +685,16 @@ h5 a:active {
   }
 }
 
-#bullet-point {
-  text-decoration: dotted;
+#carousel-box {
+  border-style: double;
+  border-width: 10px;
+  border-radius: 20px;
+  border-color: #3a75d1;
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+}
+
+#carousel-image{
+  border-radius: 10px;
 }
