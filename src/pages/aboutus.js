@@ -2,8 +2,8 @@
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
-import pic1 from './images/example-pic-1.png';
-import pic2 from './images/example-pic-2.png';
+import pic1 from './images/ally-image-trans.png';
+import pic2 from './images/khari-image-trans.png';
 import pic3 from './images/example-pic-3.png';
 
 function AboutUs(props) {
@@ -11,7 +11,7 @@ function AboutUs(props) {
         <Container>
             <Row>
                 <Col xs={3} id="allyson-pic">
-                    <img src={pic1} alt="Aira icon" />
+                    <img src={pic1} alt="Allyson" />
                 </Col>
                 <Col xs={8} id="allyson-box">
                     <h2><a href="https://github.com/allysonnostrand" target="_blank">Allyson Nostrand</a></h2>
@@ -23,7 +23,7 @@ function AboutUs(props) {
 
             <Row>
                 <Col xs={3} id="khari-pic">
-                    <img src={pic2} alt="Rinne icon" />
+                    <img src={pic2} alt="Khari" />
                 </Col>
                 <Col xs={8} id="khari-box">
                     <h2><a href="https://github.com/krober45" target="_blank">Khari Robertson</a></h2>
