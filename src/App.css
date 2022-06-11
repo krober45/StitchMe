@@ -27,7 +27,7 @@ html,
 }
 
 #links a:hover {
-color: black;
+  color: black;
 }
 
 #navbar-brand {
@@ -570,6 +570,8 @@ h5 a:active {
   border-width: 10px;
   border-radius: 20px;
   padding: 10px;
+  width: fit-content;
+  list-style-image: url(./images/yellow-bullet.png);
 
 }
 
@@ -582,7 +584,11 @@ h5 a:active {
   border-width: 10px;
   border-radius: 20px;
   padding: 10px;
+  list-style-image: url(./images/blue-bullet.png);
+}
 
+li{
+  padding: 10px;
 }
 
 #note-button {

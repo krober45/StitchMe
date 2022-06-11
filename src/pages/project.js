@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import CloudinaryUploadWidget from "../components/CloudinaryUploadWidget";
 import Button from 'react-bootstrap/Button'
-import { useParams } from "react-router-dom";
 import API from "../utils/API";
 
 function Project(props) {
@@ -108,7 +107,12 @@ function Project(props) {
                                     id="uploadedimage"
                                     src="">
                                 </img>
+                                <CloudinaryUploadWidget setImageData={setImageData} imageFormSubmit={imageFormSubmit} id={id} username={projectData.username} />
+                                {projectData.images.map((image) => (
+                                    <img id="uploadedimage" src={image.imageURL} alt=""></img>
+                                ))}
                             </Col>
+
                             <Col id="note-text">
                                 <h2>Notes:</h2>
                                 {projectData.todos.map((todo) => (
@@ -136,14 +140,9 @@ function Project(props) {
                             </Col>
 
                             <Col>
-                                <CloudinaryUploadWidget setImageData={setImageData} imageFormSubmit={imageFormSubmit} id={id} username={projectData.username}/>
-                                {projectData.images.map((image) =>(
-                                <img id="uploadedimage" src={image.imageURL} alt=""></img>    
-                                ))} 
+                              
                             </Col>
                         </Row>
-
-
                     </Container>
                 </>
             )}
