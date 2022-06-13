@@ -7,9 +7,9 @@ import Button from 'react-bootstrap/Button'
 import { useParams } from "react-router-dom";
 import API from "../utils/API";
 import Carousel from 'react-bootstrap/Carousel';
-import Pic1 from "./images/nikki-slide.png"
-import Pic2 from "./images/hiiro-slide.jpg"
-import Pic3 from "./images/adonis-slide.jpg"
+import Pic1 from "./images/examples/lemon-shark.jpg"
+import Pic2 from "./images/examples/calcifers.jpg"
+import Pic3 from "./images/examples/floral-burden.jpg"
 
 function Project(props) {
     const { id } = useParams();
@@ -151,18 +151,21 @@ function Project(props) {
                                         <img id="carousel-image"
                                             className="d-block w-100"
                                             src={Pic1}
+                                            alt="beginning of project"
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img id="carousel-image"
                                             className="d-block w-100"
                                             src={Pic2}
+                                            alt="middle progress of project"
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img id="carousel-image"
                                             className="d-block w-100"
                                             src={Pic3}
+                                            alt="finished project"
                                         />
                                     </Carousel.Item>
                                 </Carousel>

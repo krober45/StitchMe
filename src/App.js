@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+// import './Color-App.css';
+// import './Dark-App.css';
+import './Light-App.css';
 import { BrowserRouter as Router, Routes, Route, Link }
   from 'react-router-dom';
 import AboutUs from './pages/aboutus';
@@ -11,7 +13,7 @@ import Project from './pages/project';
 import Update from './pages/update';
 import TestPage from './pages/testPage';
 import * as ReactBootStrap from "react-bootstrap";
-import logo from './images/stitchme-logo-v2-trans.png';
+import logo from './images/logo/stitchme-logo-v2-trans.png';
 
 
 function App(props) {
@@ -44,8 +46,6 @@ function App(props) {
             <ReactBootStrap.Nav id="links" className="me-auto">
               <Link to={`/aboutus/${userId}`}>About us</Link>
               <Link to={`/profile/${userId}`}>Profile</Link>
-              <ReactBootStrap.NavDropdown title="Projects" id="collasible-nav-dropdown">
-              </ReactBootStrap.NavDropdown>
             </ReactBootStrap.Nav>
             {/* <ReactBootStrap.Nav>
             </ReactBootStrap.Nav> */}
@@ -65,6 +65,6 @@ function App(props) {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;

@@ -81,6 +81,7 @@ p {
     margin-bottom: 25px;
     margin-top: 25px;
     margin-left: 60px;
+    height: fit-content;
 }
 
 #khari-pic img {
@@ -97,6 +98,7 @@ p {
     padding: 20px;
     margin-bottom: 25px;
     margin-left: 60px;
+    height: fit-content;
 }
 
 #isis-pic img {
@@ -114,6 +116,7 @@ p {
     padding: 20px;
     margin-bottom: 25px;
     margin-left: 60px;
+    height: fit-content;
 }
 
 /* SIGN UP */
