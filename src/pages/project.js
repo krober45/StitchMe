@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import CloudinaryUploadWidget from "../components/CloudinaryUploadWidget";
 import Button from 'react-bootstrap/Button'
 import API from "../utils/API";
+import { useParams } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
 import Pic1 from "./images/examples/lemon-shark.jpg"
 import Pic2 from "./images/examples/calcifers.jpg"
@@ -136,7 +137,7 @@ function Project(props) {
                             <Col id="step-text">
                                 <h2>Steps:</h2>
                                 {projectData.steps.map((step) => (
-                                    <li id="step-bullet" key={`${projectData.steps}`}>{step.stepText}</li>
+                                    <li id="step-bullet" key={`${projectData.steps._id}`}>{step.stepText}</li>
                                 ))}
                                 <form onSubmit={anotherFormSubmit}>
                                     <input id="step" name="stepText" value={stepData.stepText} onChange={stephandleChange} />
