@@ -6,7 +6,9 @@ Here is a link to the deployed application on Heroku
 
 https://stitchmeproject.herokuapp.com/
 
-This is our application for the final project in the UW Coding Bootcamp. We created an application to help users organize their crochetting projects. Users can sign into their profile, upload a new project, and post todos, steps, and images of their project. We have two seperate repos, one for our backend using a mongo db and our front end was built using React. 
+This is our application for the final project in the UW Coding Bootcamp. We created an application to help users organize their fiber arts (embroidery/crochet/knit/etc..) projects. Users can sign into their profile, upload a new project, and post todos, steps, and images of their project. We have two seperate repos, one for our backend using a mongo db and our front end was built using React. 
+
+Screeshots of each page, with each theme are included in the images folder in SRC!
 
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -27,15 +29,15 @@ To run this application make sure to run the command ```create-react-app``` and 
 
 Here is a screenshot of the application
 
-<img src="">
+<img src=".">
 
 ## Contributing
 
-Ally Nostrand 
+Ally Nostrand (https://github.com/allysonnostrand)
 
-Isis Alexander
+Isis Alexander (https://github.com/QueenOfBirbs)
 
-Khari Robertson
+Khari Robertson (https://github.com/krober45)
 
 ## License
 
