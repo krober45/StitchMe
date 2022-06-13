@@ -6,9 +6,12 @@ import CloudinaryUploadWidget from "../components/CloudinaryUploadWidget";
 import Button from 'react-bootstrap/Button'
 import API from "../utils/API";
 import Carousel from 'react-bootstrap/Carousel';
-import Pic1 from "./images/examples/lemon-shark.jpg"
-import Pic2 from "./images/examples/calcifers.jpg"
-import Pic3 from "./images/examples/floral-burden.jpg"
+import Pic1 from "./images/examples/progress-1.jpg"
+import Pic2 from "./images/examples/progress-2.jpg"
+import Pic3 from "./images/examples/progress-3.jpg"
+import Pic4 from "./images/examples/progress-4.jpg"
+import Pic5 from "./images/examples/progress-5.jpg"
+import Pic6 from "./images/examples/progress-6.jpg"
 
 function Project(props) {
     const { id } = useParams();
@@ -151,21 +154,36 @@ function Project(props) {
                                         <img id="carousel-image"
                                             className="d-block w-100"
                                             src={Pic1}
-                                            alt="beginning of project"
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img id="carousel-image"
                                             className="d-block w-100"
                                             src={Pic2}
-                                            alt="middle progress of project"
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img id="carousel-image"
                                             className="d-block w-100"
                                             src={Pic3}
-                                            alt="finished project"
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic4}
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic5}
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic6}
                                         />
                                     </Carousel.Item>
                                 </Carousel>
