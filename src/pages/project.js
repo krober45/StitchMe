@@ -4,8 +4,12 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import CloudinaryUploadWidget from "../components/CloudinaryUploadWidget";
 import Button from 'react-bootstrap/Button'
-import { useParams } from "react-router-dom";
 import API from "../utils/API";
+import { useParams } from "react-router-dom";
+import Carousel from 'react-bootstrap/Carousel';
+import Pic1 from "./images/examples/lemon-shark.jpg"
+import Pic2 from "./images/examples/calcifers.jpg"
+import Pic3 from "./images/examples/floral-burden.jpg"
 
 function Project(props) {
     const { id } = useParams();
@@ -108,11 +112,18 @@ function Project(props) {
                                     id="uploadedimage"
                                     src="">
                                 </img>
+                                <Row>
+                                    <CloudinaryUploadWidget setImageData={setImageData} imageFormSubmit={imageFormSubmit} id={id} username={projectData.username} />
+                                    {projectData.images.map((image) => (
+                                        <img id="uploadedimage" src={image.imageURL} alt=""></img>
+                                    ))}
+                                </Row>
                             </Col>
+
                             <Col id="note-text">
                                 <h2>Notes:</h2>
                                 {projectData.todos.map((todo) => (
-                                    <li id="bullet-point" key={`${todo.todoText}`}>{todo.todoText}</li>
+                                    <li id="note-bullet" key={`${todo.todoText}`}>{todo.todoText}</li>
                                 ))}
                                 <form onSubmit={formSubmit}>
                                     <input id="note" name="todoText" value={formData.todoText} onChange={handleChange} />
@@ -126,7 +137,7 @@ function Project(props) {
                             <Col id="step-text">
                                 <h2>Steps:</h2>
                                 {projectData.steps.map((step) => (
-                                    <li id="bullet-point" key={`${projectData.steps}`}>{step.stepText}</li>
+                                    <li id="step-bullet" key={`${projectData.steps._id}`}>{step.stepText}</li>
                                 ))}
                                 <form onSubmit={anotherFormSubmit}>
                                     <input id="step" name="stepText" value={stepData.stepText} onChange={stephandleChange} />
@@ -136,14 +147,31 @@ function Project(props) {
                             </Col>
 
                             <Col>
-                                <CloudinaryUploadWidget setImageData={setImageData} imageFormSubmit={imageFormSubmit} id={id} username={projectData.username}/>
-                                {projectData.images.map((image) =>(
-                                <img id="uploadedimage" src={image.imageURL} alt=""></img>    
-                                ))} 
+                                <Carousel id="carousel-box">
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic1}
+                                            alt="beginning of project"
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic2}
+                                            alt="middle progress of project"
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic3}
+                                            alt="finished project"
+                                        />
+                                    </Carousel.Item>
+                                </Carousel>
                             </Col>
                         </Row>
-
-
                     </Container>
                 </>
             )}
