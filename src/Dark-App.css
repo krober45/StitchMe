@@ -1,15 +1,14 @@
 /* font-family: 'Pathway Gothic One', sans-serif;
 font-family: 'Shrikhand', cursive; */
-
 /* BACKGROUND */
-html,
+[data-theme="dark"] html,
 #root {
-    background-image: url(./images/backgrounds/light-floral-bg.jpg);
+    background-image: url(./images/backgrounds/dark-bg.png);
 }
 
 /* NAVBAR */
-.navbar {
-    background-color: #a15a60;
+[data-theme="dark"].navbar {
+    background-color: #514d4b;
     font-family: 'Shrikhand', cursive;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -51,7 +50,7 @@ h2 a:visited {
 }
 
 h2 a:hover {
-    color: #9ea485;
+    color: #a99283;
     text-decoration: none;
 }
 
@@ -63,6 +62,7 @@ h2 a:active {
 p {
     font-family: 'Pathway Gothic One', sans-serif;
     font-weight: bold;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 
 }
 
@@ -73,10 +73,10 @@ p {
 }
 
 #allyson-box {
-    background-image: url(./images/backgrounds/muted-rainbow-bg.jpg);
+    background-image: url(./images/backgrounds/frilly-bg.jpg);
     border: 10px;
-    border-color: #98abb2;
-    border-style: outset;
+    border-color: #887668;
+    border-style:outset;
     padding: 20px;
     margin-bottom: 25px;
     margin-top: 25px;
@@ -90,9 +90,9 @@ p {
 }
 
 #khari-box {
-    background-image: url(./images/backgrounds/muted-stripe-bg.jpg);
+    background-image: url(./images/backgrounds/tile-bg.jpg);
     border: 10px;
-    border-color: #f5e0b0;
+    border-color: #1d242d;
     border-style: outset;
     padding: 20px;
     margin-bottom: 25px;
@@ -100,16 +100,16 @@ p {
 }
 
 #isis-pic img {
-    height: 315px;
-    width: 300px;
+    height: 300px;
+    width: 290px;
     padding: 10px;
 }
 
 #isis-box {
-    background-image: url(./images/backgrounds/muted-roof-bg.png);
+    background-image: url(./images/backgrounds/web-bg.png);
     background-position: center;
     border: 10px;
-    border-color: #a15a60;
+    border-color: #d3b6a3;
     border-style: outset;
     padding: 20px;
     margin-bottom: 25px;
@@ -119,10 +119,10 @@ p {
 /* SIGN UP */
 #signup-box {
     background-color: whitesmoke;
-    border: #9ea485;
+    border: #d3b6a3;
     padding: 50px;
     border-width: 10px;
-    border-style:groove;
+    border-style: outset;
     border-radius: 20px;
     text-align: center;
     margin: 40px;
@@ -134,7 +134,7 @@ p {
 }
 
 #signup-button {
-    background-color: #f5e0b0;
+    background-color: #565250;
     border: 2px solid black;
     border-radius: 30px;
     box-shadow: black 4px 4px 0 0;
@@ -155,12 +155,12 @@ p {
 }
 
 #signup {
-    color: #a15a60;
+    color: #5f5b58;
     padding: 5px;
 }
 
 #signup-button:hover {
-    background-color: #cc9ea4;
+    background-color: #d3b6a3;
 }
 
 #signup-button:active {
@@ -190,7 +190,7 @@ h4 a:visited {
 }
 
 h4 a:hover {
-    color: #98abb2;
+    color: #857c76;
     text-decoration: none;
 }
 
@@ -202,10 +202,10 @@ h4 a:active {
 /* LOGIN */
 #login-box {
     background-color: whitesmoke;
-    border: #a15a60;
+    border: #434241;
     padding: 50px;
     border-width: 10px;
-    border-style: groove;
+    border-style: outset;
     border-radius: 20px;
     text-align: center;
     margin: 40px;
@@ -217,7 +217,7 @@ h4 a:active {
 }
 
 #login-button {
-    background-color: #f5e0b0;
+    background-color: #ada8a4;
     border: 2px solid black;
     border-radius: 30px;
     box-shadow: black 4px 4px 0 0;
@@ -238,12 +238,12 @@ h4 a:active {
 }
 
 #login {
-    color: #98abb2;
+    color: #d3b6a3;
     padding: 5px;
 }
 
 #login-button:hover {
-    background-color: #9ea485;
+    background-color: #867669;
 }
 
 #login-button:active {
@@ -273,7 +273,7 @@ h5 a:visited {
 }
 
 h5 a:hover {
-    color: #cc9ea4;
+    color: #7d6f65;
     text-decoration: none;
 }
 
@@ -285,9 +285,9 @@ h5 a:active {
 /* THEMES */
 #theme-box {
     background-color: whitesmoke;
-    border: #f5e0b0;
+    border: #a28d7d;
     border-width: 10px;
-    border-style: ridge;
+    border-style: outset;
     border-radius: 20px;
     text-align: center;
     font-family: 'Shrikhand', cursive;
@@ -299,7 +299,7 @@ h5 a:active {
 }
 
 #theme-box h1 {
-    color: #a15a60;
+    color: #4f4c4a;
 }
 
 .switch span {
@@ -318,15 +318,15 @@ h5 a:active {
 }
 
 .light span {
-    color: #cc9ea4;
+    color: #d3b6a3;
 }
 
 .dark span {
-    color: #9ea485;
+    color: #887567;
 }
 
 .color span {
-    color: #98abb2;
+    color: #4f4c49;
 }
 
 /* PROFILE */
@@ -338,7 +338,7 @@ h5 a:active {
 }
 
 #project-button {
-    background-color: #98abb2;
+    background-color: #777574;
     border: 2px solid black;
     border-radius: 30px;
     box-shadow: black 4px 4px 0 0;
@@ -360,7 +360,7 @@ h5 a:active {
 }
 
 #project-button:hover {
-    background-color: #f5e0b0;
+    background-color: #89796e;
 }
 
 #project-button:active {
@@ -378,14 +378,14 @@ h5 a:active {
 #input {
     padding: 5px;
     margin-right: 10px;
-    border: #655f60;
+    border: #4c5159;
     border-style: ridge;
     border-width: 10px;
     border-radius: 20px;
 }
 
 #add-button {
-    background-color: #cc9ea4;
+    background-color: #d3b6a3;
     border: 2px solid black;
     border-radius: 30px;
     box-shadow: black 4px 4px 0 0;
@@ -407,7 +407,7 @@ h5 a:active {
 }
 
 #add-button:hover {
-    background-color: #f5e0b0;
+    background-color: #5f5b58;
 }
 
 #add-button:active {
@@ -428,7 +428,7 @@ h5 a:active {
 }
 
 #theme-button {
-    background-color: #9ea485;
+    background-color: #7b695b;
     border: 2px solid black;
     border-radius: 30px;
     box-shadow: black 4px 4px 0 0;
@@ -450,7 +450,7 @@ h5 a:active {
 }
 
 #theme-button:hover {
-    background-color: #f5e0b0;
+    background-color: #d3b6a3;
 }
 
 #theme-button:active {
@@ -559,7 +559,7 @@ input {
 #note {
     padding: 5px;
     margin-right: 10px;
-    border: #655f60;
+    border: #4c5159;
     border-style: ridge;
     border-width: 10px;
     border-radius: 20px;
@@ -569,8 +569,8 @@ input {
 #step {
     padding: 5px;
     margin-right: 10px;
-    border: #655f60;
-    border-style:ridge;
+    border: black;
+    border-style: #4c5159;
     border-width: 10px;
     border-radius: 20px;
     font-family: 'Shrikhand', cursive;
@@ -581,7 +581,7 @@ input {
     font-size: larger;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     background-color: white;
-    border: #98abb2;
+    border: #7d7874;
     border-style: ridge;
     border-width: 10px;
     border-radius: 20px;
@@ -590,7 +590,7 @@ input {
 }
 
 #note-bullet {
-    list-style-image: url(./images/icons/muted-floral-pink.png);
+    list-style-image: url(./images/icons/circle-icon.png);
 }
 
 #step-text {
@@ -598,7 +598,7 @@ input {
     font-size: larger;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     background-color: white;
-    border: #cc9ea4;
+    border: #d3b6a3;
     border-style: ridge;
     border-width: 10px;
     border-radius: 20px;
@@ -606,15 +606,11 @@ input {
 }
 
 #step-bullet {
-    list-style-image: url(./images/icons/muted-floral-green.png);
-}
-
-li{
-  padding: 10px;
+    list-style-image: url(./images/icons/long-leaf.png);
 }
 
 #note-button {
-    background-color: #f5e0b0;
+    background-color: #8a7564;
     border: 2px solid black;
     border-radius: 30px;
     box-shadow: black 4px 4px 0 0;
@@ -636,7 +632,7 @@ li{
 }
 
 #note-button:hover {
-    background-color: #cc9ea4;
+    background-color: #d3b6a3;
 }
 
 #note-button:active {
@@ -653,7 +649,7 @@ li{
 
 
 #step-button {
-    background-color: #98abb2;
+    background-color: #8e8b88;
     border: 2px solid black;
     border-radius: 30px;
     box-shadow: black 4px 4px 0 0;
@@ -675,7 +671,7 @@ li{
 }
 
 #step-button:hover {
-    background-color: #9ea485;
+    background-color: #53504e;
 }
 
 #step-button:active {
@@ -694,7 +690,7 @@ li{
     border-style: ridge;
     border-width: 10px;
     border-radius: 20px;
-    border-color: #9ea485;
+    border-color: #8a7564;
     background-color: white;
     padding: 10px;
     margin: 20px;
