@@ -30,13 +30,13 @@ To run this application make sure to run the command ```create-react-app``` and 
 Here is a screenshot of the application:
 
 Color Mode:
-<img src=".src/images/theme-pics/color-mode.png">
+<img src="./src/images/theme-pics/color-mode.png">
 
 Dark Mode:
-<img src=".src/images/theme-pics/dark-mode.png">
+<img src="./src/images/theme-pics/dark-mode.png">
 
 Light Mode:
-<img src=".src/images/theme-pics/light-mode.png">
+<img src="./src/images/theme-pics/light-mode.png">
 
 ## Contributing
 
