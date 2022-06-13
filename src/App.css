@@ -609,6 +609,10 @@ input {
     list-style-image: url(./images/icons/muted-floral-green.png);
 }
 
+li{
+  padding: 10px;
+}
+
 #note-button {
     background-color: #f5e0b0;
     border: 2px solid black;
