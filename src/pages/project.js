@@ -7,9 +7,12 @@ import Button from 'react-bootstrap/Button'
 import API from "../utils/API";
 import { useParams } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
-import Pic1 from "./images/examples/lemon-shark.jpg"
-import Pic2 from "./images/examples/calcifers.jpg"
-import Pic3 from "./images/examples/floral-burden.jpg"
+import Pic1 from "./images/examples/progress-1.jpg"
+import Pic2 from "./images/examples/progress-2.jpg"
+import Pic3 from "./images/examples/progress-3.jpg"
+import Pic4 from "./images/examples/progress-4.jpg"
+import Pic5 from "./images/examples/progress-5.jpg"
+import Pic6 from "./images/examples/progress-6.jpg"
 
 function Project(props) {
     const { id } = useParams();
@@ -152,21 +155,42 @@ function Project(props) {
                                         <img id="carousel-image"
                                             className="d-block w-100"
                                             src={Pic1}
-                                            alt="beginning of project"
+                                            alt="picture of pattern, thread and embroidery hoop"
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img id="carousel-image"
                                             className="d-block w-100"
                                             src={Pic2}
-                                            alt="middle progress of project"
+                                            alt="progress after yellow/white/green"
                                         />
                                     </Carousel.Item>
                                     <Carousel.Item>
                                         <img id="carousel-image"
                                             className="d-block w-100"
                                             src={Pic3}
-                                            alt="finished project"
+                                            alt="progress after oranges are added"
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic4}
+                                            alt="progress after reds are added"
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic5}
+                                            alt="progress after purple is added"
+                                        />
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img id="carousel-image"
+                                            className="d-block w-100"
+                                            src={Pic6}
+                                            alt="progress after black is added"
                                         />
                                     </Carousel.Item>
                                 </Carousel>
