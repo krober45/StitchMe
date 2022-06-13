@@ -22,8 +22,7 @@ Screeshots of each page, with each theme are included in the images folder in SR
 ## Installation
 
 To run this application make sure to run the command ```create-react-app``` and download the following packages with ```npm i```
-- 
-
+- npm install @mui/material @emotion/react @emotion/styled
 
 ## Usage
 
